@@ -1,7 +1,22 @@
 const functions = require('firebase-functions');
 const auth = require('./util/auth');
-const app = require('express')();
+const express = require('express');
+const path = require('path');
+const app = express();
 
+const cors = require('cors');
+app.use(cors());
+
+// Serve static files from the React app
+//app.use(express.static(__dirname)); //here is important thing - no static directory, because all static :)
+
+/*app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'index.html'));
+});*/
 
 const {
     getAllMenus,
@@ -21,7 +36,7 @@ const {
 } = require('./APIs/users')
 
 // Users
-app.post('/api/login', loginUser);
+app.post('/login', loginUser);
 app.post('/signup', signUpUser);
 app.post('/user/image', auth, uploadProfilePhoto);
 app.get('/user', auth, getUserDetail);

@@ -14,11 +14,7 @@
     ],
     "rewrites": [
       {
-        "source": "/api/**",
-        "function": "app"
-      },
-      {
-        "source": "!/api/**",
+        "source": "**",
         "destination": "/index.html"
       }
     ]

@@ -46,8 +46,6 @@ class publicMenu extends Component {
 	};
 
 	componentDidMount() {
-		authMiddleWare(this.props.history);
-		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
 		axios
 			.get(`/menus/${this.state.params}`)
@@ -56,7 +54,6 @@ class publicMenu extends Component {
 					menu: response.data,
 					imageGallery: response.data.imageUrls
 				});
-				console.log(response.data.imageUrls)
 			})
 			.catch((err) => {
 				console.log(err);

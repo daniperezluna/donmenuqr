@@ -8,6 +8,9 @@ import login from './pages/login';
 import dashboard from './pages/dashboard';
 import publicMenu from './pages/publicMenu';
 import carta from './pages/carta'
+import axios from 'axios';
+
+axios.defaults.baseURL = "https://us-central1-donmenuqr.cloudfunctions.net/api";
 
 const theme = createMuiTheme({
 	palette: {

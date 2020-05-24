@@ -75,14 +75,13 @@ class login extends Component {
 			password: this.state.password
 		};
 		axios
-			.post('/api/login', userData)
+			.post('/login', userData)
 			.then((response) => {
 				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
 				this.setState({ 
 					loading: false,
-				});
-				console.log(response)		
-				// this.props.history.push('/dashboard');
+				});		
+				this.props.history.push('/dashboard');
 			})
 			.catch((error) => {				
 				this.setState({
