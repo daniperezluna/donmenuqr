@@ -1,38 +1,28 @@
 import React, { Component } from 'react';
-import logo from '../assets/YERBAGUENA.png'
-import crustaceo from '../assets/crustaceos.png'
-import huevos from '../assets/huevos.png'
-import gluten from '../assets/gluten.png'
 import '../menu.css'
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
-import Avatar from '@material-ui/core/Avatar';
-import AvatarGroup from '@material-ui/lab/AvatarGroup';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 
 const styles = (theme) => ({
     container: {
         display: 'flex',
         flexDirection: 'column',
+        position: 'absolute',
         top: 0,
         right: 0,
         left: 0,
         bottom: 0,
         height: '100%',
-        backgroundImage: 'url(https://www.donmenuqr.com/assets/fondoYerba.jpg)',
-        backgroundSize: 'contain',
-        backgroundPositionX: 'center',
-        position: 'fixed'
+        backgroundColor: 'white'
     },
     header: {
         flexGrow: 0,
-        height: '16vh',
-        minHeight: '16vh',
-        marginTop: '1vh'
+        height: '5rem',
+        minHeight: '5rem'
     },
     Card: {
         width: '100%',
@@ -46,7 +36,9 @@ const styles = (theme) => ({
         backgroundSize: 'contain'
     },
     root: {
-        flexGrow: 1
+        flexGrow: 1,
+        marginTop:  '10px',
+        overflow: 'auto'
     },
     paper: {
         padding: theme.spacing(2),
@@ -76,21 +68,15 @@ const styles = (theme) => ({
         margin: '10px 0'
     },
     fondo: {
-        padding: '1vh',
+        flexGrow: 1,
         overflow: 'auto'
     },
     imgFondo: {
-        backgroundImage: 'url(https://www.donmenuqr.com/assets/fondoYerba.jpg)',
-        backgroundSize: 'contain',
-        backgroundPositionX: 'center',
-        position: 'fixed',
-        top: 0,
-        width: '100%',
-        height: '100%'
+        backgroundColor: 'white'
     }
 })
 
-class carta extends Component {
+class cartaBasica extends Component {
 
 	render() {
 		const { classes } = this.props;		
@@ -99,10 +85,9 @@ class carta extends Component {
                 <header className={classes.header}>
                     <Grid item xs={12} >
                         <Card className={classes.Card}>
-                            <CardMedia
-                                className={classes.Media}
-                                image={logo}
-                            />
+                            <Typography gutterBottom align="center" variant="h3">
+                                Yerbagüena                                
+                            </Typography>
                         </Card>
                     </Grid>
                 </header>
@@ -116,12 +101,7 @@ class carta extends Component {
                     <Grid>
                         <Paper className={classes.paper}>
                             <Grid container spacing={2}>
-                            <Grid item xs={4} className={classes.imageContainer}>
-                                <div className={classes.image}>
-                                    <img className={classes.img} alt="complex" src="https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg" />
-                                </div>
-                            </Grid>
-                            <Grid item xs={8} sm container>
+                            <Grid item xs={12} sm container>
                                 <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
                                     <Typography gutterBottom align="left" variant="subtitle1">
@@ -130,11 +110,6 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -147,12 +122,7 @@ class carta extends Component {
                     <Grid className={classes.items}>
                         <Paper className={classes.paper}>
                             <Grid container spacing={2}>
-                            <Grid item xs={4} className={classes.imageContainer}>
-                                <div className={classes.image}>
-                                    <img className={classes.img} alt="complex" src="https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg" />
-                                </div>
-                            </Grid>
-                            <Grid item xs={8} sm container>
+                            <Grid item xs={12} sm container>
                                 <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
                                     <Typography gutterBottom align="left" variant="subtitle1">
@@ -161,11 +131,6 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -194,11 +159,6 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -220,11 +180,6 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -255,11 +210,6 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -281,11 +231,6 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -300,7 +245,7 @@ class carta extends Component {
                     <Grid>
                         <Paper elevation={3} className={classes.paperSeparator}>
                             <Typography gutterBottom align="center" variant="h5">
-                                Bebidas                                
+                                Postres                                
                             </Typography>
                         </Paper>
                     </Grid>
@@ -316,11 +261,6 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -342,11 +282,210 @@ class carta extends Component {
                                     <Typography variant="body2" align="left" gutterBottom>
                                     Descripción del plato
                                     </Typography>
-                                    <AvatarGroup max={4}>
-                                        <Avatar src={huevos} />
-                                        <Avatar src={crustaceo} />
-                                        <Avatar src={gluten} />
-                                    </AvatarGroup>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} className={classes.root}>
+                    <Grid>
+                        <Paper elevation={3} className={classes.paperSeparator}>
+                            <Typography gutterBottom align="center" variant="h5">
+                                Postres                                
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                    <Grid>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                    <Grid className={classes.items}>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} className={classes.root}>
+                    <Grid>
+                        <Paper elevation={3} className={classes.paperSeparator}>
+                            <Typography gutterBottom align="center" variant="h5">
+                                Postres                                
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                    <Grid>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                    <Grid className={classes.items}>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} className={classes.root}>
+                    <Grid>
+                        <Paper elevation={3} className={classes.paperSeparator}>
+                            <Typography gutterBottom align="center" variant="h5">
+                                Postres                                
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                    <Grid>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                    <Grid className={classes.items}>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} className={classes.root}>
+                    <Grid>
+                        <Paper elevation={3} className={classes.paperSeparator}>
+                            <Typography gutterBottom align="center" variant="h5">
+                                Postres                                
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                    <Grid>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">19.00 €</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                    </Grid>
+                    <Grid className={classes.items}>
+                        <Paper className={classes.paper}>
+                            <Grid container spacing={2}>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom align="left" variant="subtitle1">
+                                        Titulo del plato
+                                    </Typography>
+                                    <Typography variant="body2" align="left" gutterBottom>
+                                    Descripción del plato
+                                    </Typography>
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -363,4 +502,4 @@ class carta extends Component {
 	  }
 }
 
-export default withStyles(styles)(carta);
+export default withStyles(styles)(cartaBasica);

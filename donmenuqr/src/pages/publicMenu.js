@@ -46,7 +46,6 @@ class publicMenu extends Component {
 	};
 
 	componentDidMount() {
-		axios.defaults.headers.common = { Authorization: `${authToken}` };
 		axios
 			.get(`/menus/${this.state.params}`)
 			.then((response) => {

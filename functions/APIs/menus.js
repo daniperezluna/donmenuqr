@@ -159,6 +159,7 @@ exports.uploadMenuPhoto = async (request, response) => {
             });
         })
         .then(() => {
+            response.set('Access-Control-Allow-Origin', '*');
             response.status(200).json({msg: 'Successfully uploaded all images amd menu updated'})
         })
         .catch(err => { 

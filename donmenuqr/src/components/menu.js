@@ -315,8 +315,7 @@ class menu extends Component {
 			event.preventDefault();
 			const newMenu = {
 				name: this.state.name,
-                active: this.state.active ? this.state.active : true,
-                images: this.state.images
+                active: this.state.active ? this.state.active : true
 			};
 			let options = {};
 			if (this.state.buttonType === 'Edit') {
@@ -434,7 +433,7 @@ class menu extends Component {
 									{this.state.imageError ? (
 										<div className={classes.customError}>
 											{' '}
-											Wrong Image Format || Supported Format are PNG and JPG
+											Formato erróneo || Los formatos soportados son PNG y JPG
 										</div>
 									) : (
 										false

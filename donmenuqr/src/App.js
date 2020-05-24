@@ -8,6 +8,7 @@ import login from './pages/login';
 import dashboard from './pages/dashboard';
 import publicMenu from './pages/publicMenu';
 import carta from './pages/carta'
+import cartaBasica from './pages/cartaBasica'
 import axios from 'axios';
 
 axios.defaults.baseURL = "https://us-central1-donmenuqr.cloudfunctions.net/api";
@@ -35,6 +36,7 @@ function App() {
                 <Route exact path="/dashboard" component={dashboard}/>
                 <Route exact path="/cartas/:menuId" component={publicMenu}/>
                 <Route exact path="/cartas/:menuId/static" component={carta}/>
+                <Route exact path="/cartas/:menuId/basic" component={cartaBasica}/>
             </Switch>
           </div>
         </Router>
