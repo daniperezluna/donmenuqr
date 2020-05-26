@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
@@ -27,4 +27,27 @@ class carta extends Component {
 	  }
 }
 
-export default withStyles(styles)(carta);
+export default withStyles(styles)(carta);*/
+
+import withRoot from '../modules/withRoot';
+// --- Post bootstrap -----
+import React from 'react';
+import ProductSmokingHero from '../modules/views/ProductSmokingHero';
+import AppFooter from '../modules/views/AppFooter';
+import ProductHero from '../modules/views/ProductHero';
+import ProductHowItWorks from '../modules/views/ProductHowItWorks';
+import ProductCTA from '../modules/views/ProductCTA';
+
+function Index() {
+  return (
+    <React.Fragment>
+      <ProductHero />
+      <ProductHowItWorks />
+      <ProductCTA />
+      <ProductSmokingHero />
+      <AppFooter />
+    </React.Fragment>
+  );
+}
+
+export default withRoot(Index);

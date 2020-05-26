@@ -3,7 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import home from './pages/home';
+// import home from './pages/home';
+import LandingPage from './pages/home'
 import login from './pages/login';
 import dashboard from './pages/dashboard';
 import publicMenu from './pages/publicMenu';
@@ -31,7 +32,7 @@ function App() {
         <Router>
           <div>
             <Switch>
-                <Route exact path="/" component={home}/>
+                <Route exact path="/" component={LandingPage}/>
                 <Route exact path="/login" component={login}/>
                 <Route exact path="/dashboard" component={dashboard}/>
                 <Route exact path="/cartas/:menuId" component={publicMenu}/>
