@@ -37,6 +37,7 @@ import AppFooter from '../modules/views/AppFooter';
 import ProductHero from '../modules/views/ProductHero';
 import ProductHowItWorks from '../modules/views/ProductHowItWorks';
 import ProductCTA from '../modules/views/ProductCTA';
+import ContactUs from '../modules/components/ContactUs';
 
 function Index() {
   return (
@@ -45,6 +46,7 @@ function Index() {
       <ProductHowItWorks />
       <ProductCTA />
       <ProductSmokingHero />
+      <ContactUs />
       <AppFooter />
     </React.Fragment>
   );

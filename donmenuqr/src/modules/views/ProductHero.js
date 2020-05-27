@@ -5,8 +5,6 @@ import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 import backgroundImage from '../../assets/main.jpg'
 
-//const backgroundImage = '../../assets/main.jpg';
-
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
