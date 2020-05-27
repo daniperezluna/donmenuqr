@@ -17,7 +17,6 @@ exports.getAllMenus = (request, response) => {
                     images: doc.data().imageUrls
 				});
             });
-            console.log(menus);
 			return response.json(menus);
 		})
 		.catch((err) => {
@@ -31,6 +30,7 @@ exports.getMenu = (request, response) => {
         .doc(`/menus/${request.params.menuId}`)
 		.get()
 		.then((doc) => {
+            console.log(doc);
 			if (!doc.exists) {
 				return response.status(404).json(
                     { 
@@ -51,7 +51,6 @@ exports.postMenu = (request, response) => {
     const newMenuItem = {
         name: request.body.name,
         active: request.body.active,
-        images: request.body.images,
         createdAt: new Date().toISOString()
     }
     db

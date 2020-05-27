@@ -1,7 +1,6 @@
 const functions = require('firebase-functions');
 const auth = require('./util/auth');
 const express = require('express');
-const path = require('path');
 const app = express();
 
 const cors = require('cors');
@@ -24,6 +23,10 @@ const {
     updateUserDetails
 } = require('./APIs/users')
 
+const {
+    sendMail
+} = require('./APIs/mail')
+
 // Users
 app.post('/login', loginUser);
 app.post('/signup', signUpUser);
@@ -39,4 +42,8 @@ app.post('/menus', auth, postMenu);
 app.put('/menus/:menuId', auth, editMenu);
 app.post('/menus/image/:menuId', auth, uploadMenuPhoto);
 app.delete('/menus/:menuId', auth, deleteMenu);
+
+// Mails
+app.post('/send', sendMail);
+
 exports.api = functions.https.onRequest(app);
