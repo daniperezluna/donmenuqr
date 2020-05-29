@@ -30,7 +30,6 @@ exports.getMenu = (request, response) => {
         .doc(`/menus/${request.params.menuId}`)
 		.get()
 		.then((doc) => {
-            console.log(doc);
 			if (!doc.exists) {
 				return response.status(404).json(
                     { 

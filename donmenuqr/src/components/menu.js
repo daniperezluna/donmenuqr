@@ -513,24 +513,26 @@ class menu extends Component {
                             />
                         </div>
                         <div>
-                            <GridList cellHeight={160} className={classes.gridList} cols={3}>
-                                {this.state.images.map((tile) => (
-                                    <GridListTile cols={tile.cols || 1} className={classes.qrCode}>
-                                        <img src={tile} alt=""/>
-                                        <GridListTileBar
-                                            actionIcon={
-                                                <IconButton
-                                                    onClick={() => {this.handleViewImage()}} 
-                                                    className={classes.icon}
-                                                    >
-                                                    <VisibilityIcon />
-                                                </IconButton>
-                                            }
-                                        />
-                                        {this.state.viewImageOpen}
-                                    </GridListTile>
-                                ))}
-                            </GridList>
+							{ this.state.images &&
+								<GridList cellHeight={160} className={classes.gridList} cols={3}>
+									{this.state.images.map((tile) => (
+										<GridListTile cols={tile.cols || 1} className={classes.qrCode}>
+											<img src={tile} alt=""/>
+											<GridListTileBar
+												actionIcon={
+													<IconButton
+														onClick={() => {this.handleViewImage()}} 
+														className={classes.icon}
+														>
+														<VisibilityIcon />
+													</IconButton>
+												}
+											/>
+											{this.state.viewImageOpen}
+										</GridListTile>
+									))}
+								</GridList>
+							}
                         </div>
 						</DialogContent>
 					</Dialog>

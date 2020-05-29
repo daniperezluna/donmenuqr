@@ -39,12 +39,6 @@ class publicMenu extends Component {
         };
 	}
 
-	handleChange = (event) => {
-		this.setState({
-			[event.target.name]: event.target.value
-		});
-	};
-
 	componentDidMount() {
 		axios
 			.get(`/menus/${this.state.params}`)
@@ -52,7 +46,7 @@ class publicMenu extends Component {
 				this.setState({
 					menu: response.data,
 					imageGallery: response.data.imageUrls
-				});
+				},console.log(this.state.menu));
 			})
 			.catch((err) => {
 				console.log(err);

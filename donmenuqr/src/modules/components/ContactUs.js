@@ -100,17 +100,16 @@ class ContactUs extends Component {
 		const { classes } = this.props;
 		const { errors, loading } = this.state;
 		return (
-			<Container component="main" maxWidth="md">
+			<Container component="main" maxWidth="sm">
 				<CssBaseline />
 				<div className={classes.paper}>
-					<Typography component="h1" variant="h3">
+					<Typography component="h1" variant="h4">
 						Contacta con nosotros
 					</Typography>
 					<form className={classes.form} noValidate>
 						<TextField
 							variant="outlined"
                             margin="normal"
-                            autoFocus
 							required
                             fullWidth
                             value={this.state.name}

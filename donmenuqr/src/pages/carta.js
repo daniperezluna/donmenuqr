@@ -9,10 +9,31 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
+import PhoneIcon from '@material-ui/icons/Phone';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
 import CardMedia from '@material-ui/core/CardMedia';
+import Dialog from '@material-ui/core/Dialog';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import Slide from '@material-ui/core/Slide';
+import yerbaguena from '../assets/json/yerbaguena.json';
+import backYerba from '../assets/backYerba.png'
+
+const secciones = Object.keys(yerbaguena);
+const platos = Object.values(yerbaguena);
+
+const urlGMaps = "https://www.google.es/maps/place/Restaurante+Yerbag%C3%BCena/@37.0362944,-4.8676718,17z/data=!3m1!4b1!4m5!3m4!1s0xd72a5308f319d21:0xec736b58ff467a35!8m2!3d37.0362944!4d-4.8654778";
+const urlFacebook = "https://www.facebook.com/REST.YERBAGUENA/";
+const urlTwitter = "https://twitter.com/YERBAGUENA";
+const urlInstagram = "https://www.instagram.com/javi_yerbaguena/";
 
 const styles = (theme) => ({
     container: {
@@ -55,7 +76,8 @@ const styles = (theme) => ({
     },
     paperSeparator: {
         maxWidth: 500,
-        margin: '3vh auto 0 auto'
+        margin: '3vh auto 0 auto',
+        background: 'linear-gradient(45deg, #6eb535db, #9b9c9cc2)'
     },
     imageContainer: {
         display: 'flex',
@@ -73,7 +95,7 @@ const styles = (theme) => ({
         maxHeight: '100%',
     },
     items:{
-        margin: '10px 0'
+        margin: '0 0 0.5vh 0'
     },
     fondo: {
         padding: '1vh',
@@ -90,118 +112,48 @@ const styles = (theme) => ({
     },
     title: {
         padding: '1vh',
-        color: '#88B80F'
+        color: '#FFF',
+        fontFamily: 'AlinasHand',
+        fontWeight: 'bold',
+        textTransform: 'capitalize'
     },
     plato: {
-        color: '#759E0D',
+        color: '#000',
+        fontFamily: 'AlinasHand',
         fontWeight: '600',
-        lineHeight: '2.5vh'
+        lineHeight: '3vh'
     },
     descripcion: {
-        color: '#293804'
+        color: '#000',
+        fontFamily: 'AlinasHand',
+        fontWeight: '600',
     },
     precio: {
-        color: '#293804',
-        fontWeight: '600'
+        color: '#000',
+        fontWeight: '600',
+        fontFamily: 'AlinasHand'
     },
     small: {
       width: theme.spacing(3),
       height: theme.spacing(3),
+    },
+    footer: {
+        background: 'black',
+        color: 'white',
+        padding: '1vh'
+    },
+    icon: {
+        verticalAlign: 'middle',
+        padding: '0.5vh'
+    },
+    itemsInfo: {
+        margin: '5vh 0'
     }
 })
 
-const entrantes =  [
-    {
-        name: "Coulant de Foie con reducción de pasas y moscatel de Málaga",
-        desc: "",
-        price: "14 €",
-        image: "https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg"
-    },
-    {
-        name: "Ensalada de tomates en conserva tradicional con ventresca",
-        desc: "",
-        price: "12 €",
-        image: "https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg"
-    },
-    {
-        name: "Wok de Verduras y langostinos",
-        desc: "",
-        price: "12 €" 
-    },
-    {
-        name: "Alcachofas con jugo de jamón ibérico",
-        desc: "",
-        price: "12 €",
-        image: "https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg"
-    }
-]
-
-const pescado =  [
-    {
-        name: "Bacalao a la brasa",
-        desc: "",
-        price: "22 €",
-        image: "https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg"
-    },
-    {
-        name: "Salmón con bacon, gorgonzola y puré de zanahorias",
-        desc: "",
-        price: "12 €"
-    }
-]
-
-const carne =  [
-    {
-        name: "Chuletón de vaca vieja madurada",
-        desc: "45 días",
-        price: "7 € / 100 gr"
-    },
-    {
-        name: "Presa ibérica con papa arrugá y mojo picón",
-        desc: "",
-        price: "20 €",
-        image: "https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg"
-    },
-    {
-        name: "Solomillo de buey del Valle del Esla",
-        desc: "",
-        price: "36 €"
-    },
-    {
-        name: "Chivo lechal malagueño al estilo castellano",
-        desc: "",
-        price: "28 €",
-        image: "https://image.freepik.com/foto-gratis/ensalada-pechuga-pollo-parrilla-vegetales-frescos-tomates-pepinos-hojas-lechuga-ensalada-pollo-comida-sana_2829-4246.jpg"
-    }
-]
-
-const postres =  [
-    {
-        name: "Coulant de chocolate con helado de vainilla",
-        desc: "",
-        price: "6,50 €"
-    },
-    {
-        name: "Tarta de queso con helado de algodón de azúcar",
-        desc: "",
-        price: "6,50 €"
-    },
-    {
-        name: "Tarta de manzana crujiente con heladod de Baileys",
-        desc: "",
-        price: "6,50 €"
-    },
-    {
-        name: "Espuma de yogourt al limón con marrón glacé",
-        desc: "",
-        price: "6 €"
-    },
-    {
-        name: "Tocino de cielo con crema de limón",
-        desc: "",
-        price: "6 €"
-    }
-]
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
 
 class carta extends Component {
     constructor(props) {
@@ -210,19 +162,29 @@ class carta extends Component {
             entrantes: [],
             pescado: [],
             carne: [],
-            postres: []
+            postres: [],
+            open: false
         }
     }
 
-    componentWillMount = () => {
+    handleClickOpen = () => {
         this.setState({
-            entrantes: entrantes,
-            pescado: pescado,
-            carne: carne,
-            postres: postres,
-            uiLoading: false
+            open: true 
         });
-		
+    };
+    
+    handleClose = () => {
+        this.setState({
+            open: false 
+        });
+    };
+
+    handleClick = (url) => {
+        window.open(url, "_blank");
+    }
+
+    componentWillMount = () => {
+	
 	};
 
 	render() {
@@ -239,249 +201,147 @@ class carta extends Component {
                         </Card>
                     </Grid>
                 </header>
-            <div className={classes.fondo}>
-                <Grid item xs={12} className={classes.root}>
-                    <Paper elevation={3} className={classes.paperSeparator}>
-                    <Typography className = {classes.title} gutterBottom align="center" variant="h5">
-                        Entrantes                                
-                    </Typography>
-                    </Paper>
-                    { this.state.entrantes.map((entrante) => {
-                        return(
-                            <Grid className={classes.items}>
-                                <Paper elevation={1} className={classes.paper}>
-                                    <Grid container spacing={2}>
-                                    {
-                                        entrante.image && 
-                                        <Grid item xs={4} className={classes.imageContainer}>
-                                        <div className={classes.image}>
-                                            <img className={classes.img} alt="complex" src={entrante.image} />
-                                        </div>
+                <div className={classes.fondo}>
+                    { secciones.map((seccion, index) => {
+                        return (
+                    <Grid item xs={12} className={classes.root}>
+                        <Paper elevation={3} className={classes.paperSeparator}>
+                        <Typography className = {classes.title} gutterBottom align="center" variant="h4">
+                            {seccion}                                
+                        </Typography>
+                        </Paper>
+                        { platos[index].map((plato) => {
+                            return(
+                                <Grid className={classes.items}>
+                                    <Paper elevation={1} className={classes.paper}>
+                                        <Grid container spacing={2}>
+                                        {
+                                            plato.image && 
+                                            <Grid item xs={4} className={classes.imageContainer}>
+                                            <div className={classes.image}>
+                                                <img className={classes.img} alt="complex" src={plato.image} />
+                                            </div>
+                                            </Grid>
+                                        }    
+                                        <Grid item xs={plato.image ? 8 : 12} sm container spacing={2}>
+                                            <Grid item xs container direction="column" spacing={2}>
+                                            <Grid item xs>
+                                                <Typography 
+                                                    className={classes.plato}
+                                                    gutterBottom 
+                                                    align="left" 
+                                                    variant="h6"
+                                                >
+                                                    {plato.name}
+                                                </Typography>
+                                                {
+                                                    plato.desc &&
+                                                    <Typography 
+                                                        className={classes.descripcion}
+                                                        variant="body2"
+                                                        align="left"
+                                                        gutterBottom
+                                                    >
+                                                        {plato.desc}
+                                                    </Typography>
+                                                }
+                                                {
+                                                    plato.avatar &&    
+                                                    <AvatarGroup max={4}>
+                                                        <Avatar src={huevos} className={classes.small} />
+                                                        <Avatar src={crustaceo} className={classes.small} />
+                                                        <Avatar src={gluten} className={classes.small} />
+                                                    </AvatarGroup>
+                                                }
+                                            </Grid>
                                         </Grid>
-                                    }    
-                                    <Grid item xs={entrante.image ? 8 : 12} sm container>
-                                        <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
+                                        <Grid item>
                                             <Typography 
-                                                className={classes.plato}
-                                                gutterBottom 
-                                                align="left" 
-                                                variant="subtitle1"
-                                            >
-                                                {entrante.name}
+                                                className={classes.precio}
+                                                variant="h6">
+                                                {plato.price}
                                             </Typography>
-                                            <Typography 
-                                                className={classes.descripcion}
-                                                variant="body2"
-                                                align="left"
-                                                gutterBottom
-                                            >
-                                                {entrante.desc}
-                                            </Typography>
-                                            <AvatarGroup max={4}>
-                                                <Avatar src={huevos} className={classes.small} />
-                                                <Avatar src={crustaceo} className={classes.small} />
-                                                <Avatar src={gluten} className={classes.small} />
-                                            </AvatarGroup>
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
-                                    <Grid item>
-                                        <Typography 
-                                            className={classes.precio}
-                                            variant="subtitle1">
-                                            {entrante.price}
-                                        </Typography>
                                         </Grid>
-                                    </Grid>
-                                    </Grid>
-                                </Paper>
-                            </Grid>
+                                    </Paper>
+                                </Grid>
+                            );
+                        })
+                        }
+                    </Grid>
                         );
                     })
                     }
-                </Grid>         
-                <Grid item xs={12} className={classes.root}>
-                    <Paper elevation={3} className={classes.paperSeparator}>
-                    <Typography className = {classes.title} gutterBottom align="center" variant="h5">
-                        Pescados                                
-                    </Typography>
-                    </Paper>
-                    { this.state.pescado.map((plato) => {
-                        return(
-                            <Grid className={classes.items}>
-                                <Paper elevation={1} className={classes.paper}>
-                                    <Grid container spacing={2}>
-                                    {
-                                        plato.image && 
-                                        <Grid item xs={4} className={classes.imageContainer}>
-                                        <div className={classes.image}>
-                                            <img className={classes.img} alt="complex" src={plato.image} />
-                                        </div>
-                                        </Grid>
-                                    }    
-                                    <Grid item xs={plato.image ? 8 : 12} sm container>
-                                        <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography 
-                                                className={classes.plato}
-                                                gutterBottom 
-                                                align="left" 
-                                                variant="subtitle1"
-                                            >
-                                                {plato.name}
-                                            </Typography>
-                                            <Typography 
-                                                className={classes.descripcion}
-                                                variant="body2"
-                                                align="left"
-                                                gutterBottom
-                                            >
-                                                {plato.desc}
-                                            </Typography>
-                                            <AvatarGroup max={4}>
-                                                <Avatar src={huevos} className={classes.small}/>
-                                                <Avatar src={crustaceo} className={classes.small} />
-                                                <Avatar src={gluten} className={classes.small} />
-                                            </AvatarGroup>
-                                        </Grid>
+                    <Grid>
+                        <div className={classes.itemsInfo}>
+                            <img
+                            src={backYerba}
+                            alt="restaurante"
+                            className={classes.image}
+                            />                        
+                        </div>
+                    </Grid>   
+                </div>
+                <div className={classes.footer}>
+                    <Typography onClick={() => this.handleClickOpen()}
+                        variant="subtitle1">
+                        <ContactSupportIcon className={classes.icon}/>
+                        Info del Establecimiento
+                    </Typography>    
+                </div>
+                <Dialog fullScreen open={this.state.open} onClose={() => this.handleClose()} TransitionComponent={Transition}>
+                    <Toolbar>
+                        <IconButton edge="start" color="inherit" onClick={() => this.handleClose()} aria-label="close">
+                        <CloseIcon />
+                        </IconButton>
+                    </Toolbar>
+                    <div>
+                        <Grid container justify="center">
+                            <Grid item xs={6}>
+                                <div className={classes.itemsInfo}>
+                                    <img
+                                    src={logo}
+                                    alt="logo"
+                                    className={classes.image}
+                                    />
+                                    <Typography variant="subtitle1" align="center">
+                                    Avda. de la Estación s/n
+                                    </Typography>
+                                    <Typography variant="subtitle1" align="center">
+                                    29320 Campillos, Málaga
+                                    </Typography>
+                                    <Typography variant="subtitle1" align="center">
+                                        <PhoneIcon className={classes.icon}/>
+                                        952722320
+                                    </Typography>
+                                </div>
+                                <div className={classes.itemsInfo}>
+                                    <Grid item justify="center">
+                                        <Button 
+                                            onClick={() => this.handleClick(urlGMaps)}
+                                            fullWidth
+                                            variant='outlined'>
+                                                CÓMO LLEGAR
+                                        </Button>
+                                    </Grid>
+                                </div>
+                                <Grid container justify="center" spacing={2}>
+                                    <Grid item>
+                                        <TwitterIcon fontSize="large" onClick={() => this.handleClick(urlTwitter)}/>
                                     </Grid>
                                     <Grid item>
-                                        <Typography 
-                                            className={classes.precio}
-                                            variant="subtitle1">
-                                            {plato.price}
-                                        </Typography>
-                                        </Grid>
-                                    </Grid>
-                                    </Grid>
-                                </Paper>
-                            </Grid>
-                        );
-                    })
-                    }
-                </Grid>
-                <Grid item xs={12} className={classes.root}>
-                    <Paper elevation={3} className={classes.paperSeparator}>
-                    <Typography className = {classes.title} gutterBottom align="center" variant="h5">
-                        Carnes                                
-                    </Typography>
-                    </Paper>
-                    { this.state.carne.map((plato) => {
-                        return(
-                            <Grid className={classes.items}>
-                                <Paper elevation={1} className={classes.paper}>
-                                    <Grid container spacing={2}>
-                                    {
-                                        plato.image && 
-                                        <Grid item xs={4} className={classes.imageContainer}>
-                                        <div className={classes.image}>
-                                            <img className={classes.img} alt="complex" src={plato.image} />
-                                        </div>
-                                        </Grid>
-                                    }    
-                                    <Grid item xs={plato.image ? 8 : 12} sm container>
-                                        <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography 
-                                                className={classes.plato}
-                                                gutterBottom 
-                                                align="left" 
-                                                variant="subtitle1"
-                                            >
-                                                {plato.name}
-                                            </Typography>
-                                            <Typography 
-                                                className={classes.descripcion}
-                                                variant="body2"
-                                                align="left"
-                                                gutterBottom
-                                            >
-                                                {plato.desc}
-                                            </Typography>
-                                            <AvatarGroup max={4}>
-                                                <Avatar src={huevos} className={classes.small} />
-                                                <Avatar src={crustaceo} className={classes.small} />
-                                                <Avatar src={gluten} className={classes.small} />
-                                            </AvatarGroup>
-                                        </Grid>
+                                        <FacebookIcon fontSize="large" onClick={() => this.handleClick(urlFacebook)}/>
                                     </Grid>
                                     <Grid item>
-                                        <Typography 
-                                            className={classes.precio}
-                                            variant="subtitle1">
-                                            {plato.price}
-                                        </Typography>
-                                        </Grid>
+                                        <InstagramIcon fontSize="large" onClick={() => this.handleClick(urlInstagram)}/>
                                     </Grid>
-                                    </Grid>
-                                </Paper>
+                                </Grid>
                             </Grid>
-                        );
-                    })
-                    }
-                </Grid>
-                <Grid item xs={12} className={classes.root}>
-                    <Paper elevation={3} className={classes.paperSeparator}>
-                    <Typography className = {classes.title} gutterBottom align="center" variant="h5">
-                        Postres                                
-                    </Typography>
-                    </Paper>
-                    { this.state.postres.map((plato) => {
-                        return(
-                            <Grid className={classes.items}>
-                                <Paper elevation={1} className={classes.paper}>
-                                    <Grid container spacing={2}>
-                                    {
-                                        plato.image && 
-                                        <Grid item xs={4} className={classes.imageContainer}>
-                                        <div className={classes.image}>
-                                            <img className={classes.img} alt="complex" src={plato.image} />
-                                        </div>
-                                        </Grid>
-                                    }    
-                                    <Grid item xs={plato.image ? 8 : 12} sm container>
-                                        <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography 
-                                                className={classes.plato}
-                                                gutterBottom 
-                                                align="left" 
-                                                variant="subtitle1"
-                                            >
-                                                {plato.name}
-                                            </Typography>
-                                            <Typography 
-                                                className={classes.descripcion}
-                                                variant="body2"
-                                                align="left"
-                                                gutterBottom
-                                            >
-                                                {plato.desc}
-                                            </Typography>
-                                            <AvatarGroup max={4}>
-                                                <Avatar src={huevos} className={classes.small} />
-                                                <Avatar src={crustaceo} className={classes.small} />
-                                                <Avatar src={gluten} className={classes.small} />
-                                            </AvatarGroup>
-                                        </Grid>
-                                    </Grid>
-                                    <Grid item>
-                                        <Typography 
-                                            className={classes.precio}
-                                            variant="subtitle1">
-                                            {plato.price}
-                                        </Typography>
-                                        </Grid>
-                                    </Grid>
-                                    </Grid>
-                                </Paper>
-                            </Grid>
-                        );
-                    })
-                    }
-                </Grid>
+                        </Grid>
+                    </div>
+                </Dialog>    
             </div>
-        </div>
 		);
 	  }
 }

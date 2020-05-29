@@ -62,7 +62,7 @@ const tiers = [
         'Cartel informativo A3', 
         '9 vinilos adhesivos QR'
     ],
-    buttonText: 'Ver ejemplo',
+    buttonText: 'Ver ejemplo de menú',
     buttonVariant: 'contained',
     url: '/cartas/3Rllb9kJWoix85iGafmG/basic'
 },
@@ -78,8 +78,8 @@ const tiers = [
       '9 vinilos QR sobre PVC',
       '20 vinilos adhesivos QR'
     ],
-    buttonText: 'Ver ejemplo',
-    buttonVariant: 'outlined',
+    buttonText: 'Ver ejemplo de menú',
+    buttonVariant: 'contained',
     url: '/cartas/3Rllb9kJWoix85iGafmG/static'
   }
 ];

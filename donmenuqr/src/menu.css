@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "AlinasHand"; 
+    src: url("//db.onlinewebfonts.com/t/c438b2a05c085bb569fa4a66bc09a5dd.eot"); 
+    src: url("//db.onlinewebfonts.com/t/c438b2a05c085bb569fa4a66bc09a5dd.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/c438b2a05c085bb569fa4a66bc09a5dd.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/c438b2a05c085bb569fa4a66bc09a5dd.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/c438b2a05c085bb569fa4a66bc09a5dd.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/c438b2a05c085bb569fa4a66bc09a5dd.svg#AlinasHand") format("svg"); 
+}
+
 .hero-text-heading,.probootstrap-hero h1 {
     font-size: 52px;
     font-weight: 300;
