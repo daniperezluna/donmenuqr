@@ -1,157 +1,772 @@
-{ 
-    "brraa": [
+{
+    "nuestras sugerencias":[
        {
-          "name":"Queso viejo curado",
+          "name":"Croquetas caseras de nuestro cocido con pollo y jamón ibérico",
           "desc":"",
-          "price":"12 €"
+          "price":["8.00 €"]
        },
        {
-          "name":"Jamón Ibérico de bellota 100%",
-          "desc":"",
-          "price":"24 €"
+          "name":"Anchoas del cantábrico en aceite de oliva",
+          "desc":"Precio por unidad, mínimo 6 unidades",
+          "price":["2.00 €"],
+          "alergenos":["gluten", "pescado", "azufre"] 
        },
        {
-          "name":"Timbal de foie con queso de cabra caramelizado al Pedro Ximénez",
+          "name":"Revuelto de morcilla de burgos con huevos camperos",
           "desc":"",
-          "price":"16 €"
+          "price":["8.00 €"]
+       },
+       {
+          "name":"Calamar nacional",
+          "desc":"800 gr. pieza aprox.",
+          "price":["24.00 €"]
+       },
+       {
+         "name":"Calamar nacional",
+         "desc":"1200 gr. pieza aprox.",
+         "price":["28.00 €"]
+       },
+       {
+          "name":"Arroz caldoso con bogavante",
+          "desc":"Mínimo 2 personas",
+          "price":["50.00 €"],
+          "alergenos": ["gluten", "moluscos", "pescado", "azufre", "moluscos"]
+       },
+       {
+          "name":"Filet mignon",
+          "desc":"Solomillo de ternera con crema de boletus",
+          "price":["22.00 €"],
+          "alergenos": ["gluten", "azufre"]
+       }
+    ],
+    "ensaladas":[
+       {
+          "name":"Aguacates",
+          "desc":"Con langostinos, salsa rosa y lechuga juliana",
+          "price":["10.00 €"],
+          "alergenos": ["gluten", "moluscos", "huevos", "pescado", "soja", "lacteos", "azufre"]
+       },
+       {
+          "name":"Ensalada templada",
+          "desc":"Bacón, ajos, queso fresco de cabra malagueña, tomate cherry, piñones y lechuga",
+          "price":["10.00 €"],
+          "alergenos": ["gluten", "lacteos", "nueces", "azufre"]
+       },
+       {
+          "name":"Ensalada mixta",
+          "desc":"Lechuga, tomate, maíz, remolacha, atún, huevo, cebolla y espárragos blancos",
+          "price":["5.50 €"],
+          "alergenos": ["gluten", "huevos", "pescado", "azufre"]
+       },
+       {
+          "name":"Ensalada especial",
+          "desc":"Cogollos, tomate, atún, huevo, maíz, remolacha, zanahoria, kiwi, aguacate y espárragos",
+          "price":["7.50 €"],
+          "alergenos": ["gluten", "huevos", "pescado", "azufre"]
+       },
+       {
+          "name":"Picadillo de tomate, ajo, atún y perejil",
+          "desc":"",
+          "price":["5.50 €"],
+          "alergenos": ["gluten", "pescado", "azufre"]
+       },
+       {
+          "name":"Ensalada tropical",
+          "desc":"(Lechuga, frutas, langostinos y salsa rosa)",
+          "price":["10.00 €"],
+          "alergenos": ["gluten", "moluscos", "huevos", "pescado", "soja", "lacteos", "azufre"]
+       }
+    ],
+    "entrantes":[
+       {
+          "name":"Gambas blancas a la plancha",
+          "desc":"",
+          "price":["15.00 €"],
+          "alergenos": ["gluten", "moluscos", "azufre"]
+       },
+       {
+          "name":"Langostinos a la plancha",
+          "desc":"",
+          "price":["10.00 €"],
+          "alergenos": ["gluten", "moluscos", "azufre"]
+       },
+       {
+          "name":"Jamón de bellota (D. 0.)",
+          "desc":"",
+          "price":["22.00 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+          "name":"Jamón serrano",
+          "desc":"",
+          "price":["13.00 €"]
+       },
+       {
+          "name":"Combinado ibérico",
+          "desc":"",
+          "price":["13.00 €"],
+          "alergenos": ["gluten", "soja", "lacteos"]
+       },
+       {
+          "name":"Queso de oveja añejo",
+          "desc":"",
+          "price":["12.50 €"],
+          "alergenos": ["gluten", "huevos", "lacteos"]
+       },
+       {
+          "name":"Combinado de quesos",
+          "desc":"",
+          "price":["12.50 €"],
+          "alergenos": ["gluten", "huevos", "lacteos"]
+       },
+       {
+          "name":"Queso de aceite añejo de consuegra (Toledo)",
+          "desc":"",
+          "price":["12.50 €"],
+          "alergenos": ["gluten", "huevos", "lacteos"]
+       },
+       {
+          "name":"Choricito cocido con vino",
+          "desc":"",
+          "price":["8.00 €"],
+          "alergenos": ["gluten", "lacteos", "azufre"]
        },
        {
           "name":"Ensaladilla Rusa",
           "desc":"",
-          "price":"10 €"
+          "price":["8.00 €"]
        },
        {
-          "name":"Huevos rotos en empedrado de patatas y chistorra",
+          "name":"Pulpo a la gallega",
           "desc":"",
-          "price":"8 €"
-       },
-       {
-          "name":"Teriyaqui de pluma ibérica",
-          "desc":"",
-          "price":"14 €"
-       },
-       {
-          "name":"Pulpo a la brasa",
-          "desc":"",
-          "price":"20€"
-       },
-       {
-          "name":"Patatas bravas al estilo Peret",
-          "desc":"",
-          "price":"7 €"
-       },
-       {
-          "name":"Anchoas del Cantábrico con pan y tomate",
-          "desc":"",
-          "price":"3 € / u."
-       },
-       {
-          "name":"Croquetas de jamón y nueces con alioli de membrillo",
-          "desc":"",
-          "price":"8 €"
-       },
-       {
-          "name":"Parrillada de verduras",
-          "desc":"",
-          "price":"12 €"
-       },
-       {
-          "name":"Mollejas de chivo al palocortado",
-          "desc":"",
-          "price":"16 €"
-       },
-       {
-          "name":"Huevos con patatas y trufa",
-          "desc":"",
-          "price":"12 €"
-       },
-       {
-          "name":"Cocochas de bacalao en su Pil-Pil",
-          "desc":"",
-          "price":"16 €"
+          "price":["16.00 €"],
+          "alergenos": ["pescado"]
        }
-    ], 
-    "entrantes":[
+    ],
+    "primeros platos":[
+         {
+            "name":"Migas (En temporada)",
+            "desc":"",
+            "price":["6.00 €"],
+            "alergenos": ["gluten", "huevos", "lacteos", "azufre"]
+         },
+         {
+            "name":"Ajo blanco malagueño",
+            "desc":"",
+            "price":["5.50 €"],
+            "alergenos": ["gluten", "nueces", "azufre"]
+         },
+         {
+            "name":"Sopa de Marisco",
+            "desc":"",
+            "price":["5.50 €"],
+            "alergenos": ["gluten", "pescado", "azufre", "moluscos"]
+         },
+         {
+            "name":"Sopa de picadillo",
+            "desc":"",
+            "price":["4.50 €"],
+            "alergenos": ["gluten", "huevos"]
+         },
+         {
+            "name":"Porra o Salmorejo",
+            "desc":"",
+            "price":["6.00 €"],
+            "alergenos": ["gluten"]
+         },
+         {
+            "name":"Gazpacho (en temporada)",
+            "desc":"",
+            "price":["6.00 €"],
+            "alergenos": ["gluten", "nueces", "azufre"]
+         }
+    ],
+    "verduras y Huevos": [
+         {
+            "name":"Revuelto de bacalao con gambas y ajitos",
+            "desc":"",
+            "price":["12.00 €"]
+         },
+         {
+            "name":"Alcachofitas salteadas con jamón y gambas",
+            "desc":"",
+            "price":["11.00 €"]
+         },
+         {
+            "name":"Tortilla española",
+            "desc":"",
+            "price":["5.00 €"]
+         },
+         {
+            "name":"El plato del sacristán",
+            "desc":"Huevos con jamón, patatas y pimientos",
+            "price":["8.50 €"]
+         }
+    ],
+    "pescados":[
+       {
+          "name":"Lomo de bacalao al ajo arriero",
+          "desc":"",
+          "price":["14.50 €"],
+          "alergenos": ["gluten", "moluscos", "pescado", "azufre"]
+       },
+       {
+          "name":"Salmón al mesón",
+          "desc":"Flambeado con salsa de gambas",
+          "price":["16.00 €"],
+          "alergenos": ["gluten", "moluscos", "pescado", "lacteos", "azufre" ]
+       },
+       {
+          "name":"Calamares fritos con guarnición",
+          "desc":"",
+          "price":["10.00 €"],
+          "alergenos": ["gluten", "pescado", "azufre"]
+       },
+       {
+          "name":"Rosada a la plancha",
+          "desc":"",
+          "price":["13.00 €"],
+          "alergenos": ["gluten", "pescado"]
+       },
+       {
+          "name":"Bacalao frito con guarnición",
+          "desc":"",
+          "price":["11.00 €"],
+          "alergenos": ["gluten","pescado", "azufre"]
+       },
+       {
+          "name":"Fritura de pescado con ensalada",
+          "desc":"",
+          "price":["12.50 €"],
+          "alergenos": ["gluten", "pescado", "azufre"]
+       },
+       {
+          "name":"Pez espada a la plancha",
+          "desc":"",
+          "price":["11.50 €"],
+          "alergenos": ["gluten", "pescado", "azufre"]
+       },
+       {
+          "name":"Lomo de atún rojo salvaje a la sidra",
+          "desc":"",
+          "price":["21.00 €"],
+          "alergenos": ["gluten", "pescado", "azufre"]
+       }
+    ],
+    "cerdo":[
+       {
+          "name": "IBERICOS CAMPAÑA BELLOTA",
+          "desc":"",
+          "price":[""]
+       },
+       {
+          "name":"Secreto ibérico a la brasa",
+          "desc":"",
+          "price":["14.00 €"],
+          "alergenos": ["gluten", "azufre"]
+       },
+       {
+          "name":"Presa ibérica campaña de la bellota",
+          "desc":"",
+          "price":["15.00 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+          "name":"Churrasco de cerdo a la brasa",
+          "desc":"",
+          "price":["9.00 €"],
+          "alergenos": ["gluten", "azufre"]
+       },
+       {
+          "name":"Lagarto ibérico campaña de la bellota",
+          "desc":"",
+          "price":["11.50 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+          "name":"Solomillo de cerdo a la brasa",
+          "desc":"",
+          "price":["10.00 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+          "name":"Chuleta o filete de cerdo a la brasa",
+          "desc":"",
+          "price":["8.00 €"]
+       },
+       {
+          "name":"",
+          "desc":"",
+          "price":[""]
+       },
+       {
+          "name":"Cochinillo lechal de Segovia 1/4 al horno y guarnición",
+          "desc":"",
+          "price":["23.50 €"],
+          "alergenos": ["gluten", "azufre"]
+       },
+       {
+          "name":"Carrillada de cerdo ibérico",
+          "desc":"Campaña de la bellota",
+          "price":["12.00 €"],
+          "alergenos": ["gluten", "azufre"]
+       },
+       {
+          "name":"El plato de Diego",
+          "desc":"Lomo en manteca, huevo, chorizo, patatas y pimiento",
+          "price":["9.50 €"],
+          "alergenos": ["gluten", "huevos"]
+       },
+       {
+          "name":"Brocheta de solomillo de cerdo ala brasa",
+          "desc":"",
+          "price":["11.00 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+          "name":"Lomo con salsa de tomate y patatas fritas",
+          "desc":"",
+          "price":["8.00 €"],
+          "alergenos": ["gluten",  "azufre"]
+       },
+       {
+          "name":"Flamenquín casero",
+          "desc":"",
+          "price":["8.50€"]
+       },
+       {
+          "name":"Salsas",
+          "desc":"Roquefort, pimienta...",
+          "price":["1.50 €"]
+       }
+    ],
+    "Cordero":[
+       {
+          "name":"Chuleta de cordero recental con guarnición",
+          "desc":"",
+          "price":["15.00 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+          "name":"Pierna de cordero",
+          "desc":"",
+          "price":["19.50 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+          "name":"Pierna de cordero a la miel de romero",
+          "desc":"",
+          "price":["19.50 €"],
+          "alergenos": ["gluten"]
+       }
+    ],
+    "aves":[
+       {
+          "name":"Pechuga de pollo",
+          "desc":"Rellena de gambas y flambeada con salsa de bacón",
+          "price":["12.00 €"],
+          "alergenos": ["gluten", "moluscos", "soja", "lacteos", "azufre"]
+       },
+       {
+          "name":"Pechuga de pollo a la brasa",
+          "desc":"",
+          "price":["8.50 €"],
+          "alergenos": ["gluten"]
+       },
+       {
+         "name":"Salsa",
+         "desc":"A la pìmienta o Roquefort",
+         "price":["1.50 €"]
+       },
+       {
+          "name":"Pechuga de pollo empanada",
+          "desc":"",
+          "price":["8.00 €"]
+       }
+    ],
+    "conejo":[
+       {
+          "name":"Conejo a la brasa",
+          "desc":"",
+          "price":["10.00 €"],
+          "alergenos": ["gluten"]
+       }
+    ],
+    "carnes añojo":[
+        
         {
-           "name":"Coulant de Foie con reducción de pasas y moscatel de Málaga",
-           "desc":"",
-           "price":"14 €"
+            "name":"Chuletón",
+            "desc":"Cada 100 gr (Para 2 personas)",
+            "price":["4.50 €"],
+            "alergenos": ["gluten"]
         },
         {
-           "name":"Ensalada de tomates en conserva tradicional con ventresca",
-           "desc":"",
-           "price":"12 €"
+            "name":"Entrecot",
+            "desc":"Cada 100 gr",
+            "price":["4.50 €"],
+            "alergenos": ["gluten"]
         },
         {
-           "name":"Wok de Verduras y langostinos",
-           "desc":"",
-           "price":"12 €"
+            "name":"Solomillo",
+            "desc":"",
+            "price":["22.00 €"],
+            "alergenos": ["gluten"]
         },
         {
-           "name":"Alcachofas con jugo de jamón ibérico",
-           "desc":"",
-           "price":"12 €"
+            "name":"Rabo de toro",
+            "desc":"",
+            "price":["14.00 €"],
+            "alergenos": ["gluten"]
         }
-     ],
-     "pescado":[
+    ],
+    "carnes vacuno mayor":[
+        
         {
-           "name":"Bacalao a la brasa",
-           "desc":"",
-           "price":"22 €"
+            "name":"Chuletón",
+            "desc":"Cada 100 gr (Para 2 personas)",
+            "price":["4.95 €"],
+            "alergenos": ["gluten"]
         },
         {
-           "name":"Salmón con bacon, gorgonzola y puré de zanahorias",
-           "desc":"",
-           "price":"12 €"
+            "name":"Entrecot",
+            "desc":"Cada 100 gr",
+            "price":["4.95 €"],
+            "alergenos": ["gluten"]
+        },
+        {
+            "name":"Solomillo",
+            "desc":"",
+            "price":["23.00 €"],
+            "alergenos": ["gluten"]
+        },
+        {
+            "name":"Hamburguesa de vacuno mayor",
+            "desc":"",
+            "price":["8.00 €"]
         }
-     ],
-     "carne":[
+    ],
+    "Raciones":[
+        
+      {
+          "name":"Croquetas caseras con patatas fritas y alioli",
+          "desc":"",
+          "price":["8.00 €", "5.50 €"]
+      },
+      {
+          "name":"Croquetas caseras de bacalao",
+          "desc":"",
+          "price":["9.00 €", "6.00 €"]
+      },
+      {
+          "name":"Plato del sacristán",
+          "desc":"Jamón, huevo, pimiento verde frito y patatas",
+          "price":["8.50 €"]
+      },
+      {
+          "name":"Medallón de solomillo de cerdo y patatas fritas",
+          "desc":"",
+          "price":["8.50 €", "6.00 €"]
+      },
+      {
+          "name":"Ensaladilla Rusa",
+          "desc":"",
+          "price":["7.00 €", "5.00 €"]
+      },
+      {
+          "name":"Filetitos de pollo empanados y patatas fritas",
+          "desc":"",
+          "price":["8.00 €", "5.50 €"]
+      },
+      {
+          "name":"Porra o Salmorejo",
+          "desc":"",
+          "price":["6.00 €", "4.00 €"]
+      },
+      {
+          "name":"Filete de cerdo con patatas fritas",
+          "desc":"",
+          "price":["8.00 €", "5.50 €"]
+      },
+      {
+          "name":"Lomo de cerdo en manteca y patatas fritas",
+          "desc":"",
+          "price":["9.00 €", "6.00 €"]
+      },
+      {
+          "name":"Lomo de cerdo con tomate y patatas fritas",
+          "desc":"",
+          "price":["8.50 €", "6.00 €"]
+      },
+      {
+          "name":"Chorizo cocido con vino y patatas fritas",
+          "desc":"",
+          "price":["7.00 €", "5.00 €"]
+      },
+      {
+          "name":"Calamares fritos con patatas fritas y alioli",
+          "desc":"",
+          "price":["10.00 €", "7.00 €"]
+      },
+      {
+          "name":"Bacalao frito con ensalada",
+          "desc":"",
+          "price":["11.00 €", "7.00 €"]
+      },
+      {
+          "name":"Flamenquin casero troceado con patatas fritas y alioli",
+          "desc":"",
+          "price":["8.50 €"]
+      }
+      
+  ],
+    "bocadillos":[
+        
         {
-           "name":"Chuletón de vaca vieja madurada",
-           "desc":"45 días",
-           "price":"7 € / 100 gr"
+            "name":"Lomo en manteca",
+            "desc":"",
+            "price":["4.25 €", "3.75 €", "2.75 €"],
+            "pan": ["Rebanada", "Bocadillo", "Pitufo"],
+            "alergenos": ["gluten"]
         },
         {
-           "name":"Presa ibérica con papa arrugá y mojo picón",
-           "desc":"",
-           "price":"20 €"
+            "name":"Bacon con rodajas de tomate y queso",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos", "soja", "lacteos"]
         },
         {
-           "name":"Solomillo de buey del Valle del Esla",
-           "desc":"",
-           "price":"36 €"
+            "name":"Bacon",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "soja", "lacteos"]
         },
         {
-           "name":"Chivo lechal malagueño al estilo castellano",
-           "desc":"",
-           "price":"28 €"
+            "name":"Bacon con queso y huevo",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos", "soja", "lacteos"]
+        },
+        {
+            "name":"Filete de cerdo",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten"]
+        },
+        {
+            "name":"Filete de pollo",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten"]
+        },
+        {
+            "name":"Tortilla de jamón",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos"]
+        },
+        {
+            "name":"Tortilla francesa",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos"]
+        },
+        {
+            "name":"Serranito",
+            "desc":"Filete de cerdo, jamón y pimiento",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten"]
+        },
+        {
+            "name":"Serranito",
+            "desc":"Filete de pollo, jamón y pimiento",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten"]
+        },
+        {
+            "name":"Atún con tomate",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "pescado"]
+        },
+        {
+            "name":"Caballa con tomate y cebolla",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "pescado"]
+        },
+        {
+            "name":"Chorizo cocido con vino",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "lacteos", "azufre"]
+        },
+        {
+            "name":"Mixto con queso curado y jamón serrano",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos", "lacteos"]
+        },
+        {
+            "name":"Andaluz",
+            "desc":"Jamón, tomate y aceite",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos"]
+        },
+        {
+            "name":"York, queso y mantequilla",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos", "soja", "lacteos"]
+        },
+        {
+            "name":"Salchichón ibérico",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos", "soja", "lacteos", "nueces"]
+        },
+        {
+            "name":"Chorizo Ibérico",
+            "desc":"",
+            "price":["3.75 €", "2.75 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos", "soja", "lacteos", "nueces"]
+        },
+        {
+            "name":"Queso añejo",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "huevos", "lacteos"]
+        },
+        {
+            "name":"Morcilla ibérica",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "soja", "lacteos"]
+        },
+        {
+            "name":"Jamón ibérico",
+            "desc":"",
+            "price":["4.00 €", "5.50 €", "3.75 €"],
+            "pan": ["Rebanada","Bocadillo", "Pitufo"],
+            "alergenos": ["gluten"]
+        },
+        {
+            "name":"Lomo adobado",
+            "desc":"",
+            "price":["3.50 €", "2.50 €"],
+            "pan": ["Bocadillo", "Pitufo"],
+            "alergenos": ["gluten", "soja"]
+        },
+        {
+            "name":"Sandwiches mixto",
+            "desc":"",
+            "price":["3.00 €"],
+            "alergenos": ["gluten", "soja", "lacteos"]
+        },
+        {
+            "name":"Sandwiches vegetal",
+            "desc":"",
+            "price":["3.00 €"],
+            "alergenos": ["gluten", "huevos", "soja", "azufre"]
         }
-     ],
-     "postre":[
+    ],
+    "Desayunos":[
         {
-           "name":"Coulant de chocolate con helado de vainilla",
+           "name":"Paté a la pimienta negra",
            "desc":"",
-           "price":"6,50 €"
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten", "lacteos"]
         },
         {
-           "name":"Tarta de queso con helado de algodón de azúcar",
+           "name":"Paté de york",
            "desc":"",
-           "price":"6,50 €"
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten", "huevos", "soja", "lacteos", "nueces", "sesamo"]
         },
         {
-           "name":"Tarta de manzana crujiente con heladod de Baileys",
+           "name":"Aceite de oliva virgen extra",
            "desc":"",
-           "price":"6,50 €"
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten"]
         },
         {
-           "name":"Espuma de yogourt al limón con marrón glacé",
+           "name":"Zurrapa de lomo",
            "desc":"",
-           "price":"6 €"
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten"]
         },
         {
-           "name":"Tocino de cielo con crema de limón",
+           "name":"Zurrapa de asadura",
            "desc":"",
-           "price":"6 €"
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten"]
+        },
+        {
+           "name":"Mantequilla",
+           "desc":"",
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten", "lacteos"]
+        },
+        {
+           "name":"Mantequilla y mermelada",
+           "desc":"",
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten","lacteos"]
+        },
+        {
+           "name":"Sobrasada",
+           "desc":"",
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten"]
+        },
+        {
+           "name":"Miel y aceite",
+           "desc":"",
+           "price":["3.00 €", "3.00 €", "2.50 €", "2.50 €"],
+           "pan": ["Rebanada","Bocadillo", "Pitufo", "Multi Cereales"],
+           "alergenos": ["gluten"]
+        },
+        {
+           "name":"1/2 Rebanada con café o similar",
+           "desc":"",
+           "price":["2.50 €"],
+           "alergenos": ["gluten"]
+        },
+        {
+           "name":"Zumo natural pequeño",
+           "desc":"",
+           "price":["2.00 €"]
+        },
+        {  
+           "name":"Zumo natural grande",
+           "desc":"",
+           "price":["2.50 €"]
         }
-     ]
-  }
+    ]  
+}

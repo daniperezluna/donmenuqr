@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import logo from '../assets/YERBAGUENA.png'
 import crustaceo from '../assets/crustaceos.png'
 import huevos from '../assets/huevos.png'
@@ -6,6 +7,7 @@ import gluten from '../assets/gluten.png'
 import '../menu.css'
 
 import withStyles from '@material-ui/core/styles/withStyles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
@@ -24,11 +26,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
-import yerbaguena from '../assets/json/yerbaguena.json';
 import backYerba from '../assets/backYerba.png'
-
-const secciones = Object.keys(yerbaguena);
-const platos = Object.values(yerbaguena);
 
 const urlGMaps = "https://www.google.es/maps/place/Restaurante+Yerbag%C3%BCena/@37.0362944,-4.8676718,17z/data=!3m1!4b1!4m5!3m4!1s0xd72a5308f319d21:0xec736b58ff467a35!8m2!3d37.0362944!4d-4.8654778";
 const urlFacebook = "https://www.facebook.com/REST.YERBAGUENA/";
@@ -151,6 +149,10 @@ const styles = (theme) => ({
     }
 })
 
+const orderMenu = (orden, menu) => {
+    return orden.map(o => { for (var key in menu) { if (menu === o) return menu[key]}})
+}
+
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
   });
@@ -163,7 +165,9 @@ class carta extends Component {
             pescado: [],
             carne: [],
             postres: [],
-            open: false
+            open: false,
+            uiLoading: true,
+			params: this.props.match.params.menuId
         }
     }
 
@@ -183,167 +187,189 @@ class carta extends Component {
         window.open(url, "_blank");
     }
 
-    componentWillMount = () => {
-	
+    componentDidMount = () => {
+        axios
+        .get(`/menus/${this.state.params}`)
+        .then((response) => {
+            console.log(response.data.ordenSecciones)
+            this.setState({
+                menu: response.data,
+                secciones: response.data.ordenSecciones,
+                platos: response.data.ordenSecciones.map(o => { for (var key in response.data.carta) { if (key === o) return response.data.carta[key]}}),
+                uiLoading: false
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 	};
 
 	render() {
-		const { classes } = this.props;		
-		return (
-            <div className={classes.container}>
-                <header className={classes.header}>
-                    <Grid item xs={12} >
-                        <Card className={classes.Card}>
-                            <CardMedia
-                                className={classes.Media}
-                                image={logo}
-                            />
-                        </Card>
-                    </Grid>
-                </header>
-                <div className={classes.fondo}>
-                    { secciones.map((seccion, index) => {
-                        return (
-                    <Grid item xs={12} className={classes.root}>
-                        <Paper elevation={3} className={classes.paperSeparator}>
-                        <Typography className = {classes.title} gutterBottom align="center" variant="h4">
-                            {seccion}                                
-                        </Typography>
-                        </Paper>
-                        { platos[index].map((plato) => {
-                            return(
-                                <Grid className={classes.items}>
-                                    <Paper elevation={1} className={classes.paper}>
-                                        <Grid container spacing={2}>
-                                        {
-                                            plato.image && 
-                                            <Grid item xs={4} className={classes.imageContainer}>
-                                            <div className={classes.image}>
-                                                <img className={classes.img} alt="complex" src={plato.image} />
-                                            </div>
-                                            </Grid>
-                                        }    
-                                        <Grid item xs={plato.image ? 8 : 12} sm container spacing={2}>
-                                            <Grid item xs container direction="column" spacing={2}>
-                                            <Grid item xs>
-                                                <Typography 
-                                                    className={classes.plato}
-                                                    gutterBottom 
-                                                    align="left" 
-                                                    variant="h6"
-                                                >
-                                                    {plato.name}
-                                                </Typography>
-                                                {
-                                                    plato.desc &&
+        const { classes } = this.props;
+        if (this.state.uiLoading === true) {
+			return (
+				<main className={classes.content}>
+					<div className={classes.toolbar} />
+					{this.state.uiLoading && <CircularProgress size={150} className={classes.uiProgess} />}
+				</main>
+			);
+		} else {		
+            return (
+                <div className={classes.container}>
+                    <header className={classes.header}>
+                        <Grid item xs={12} >
+                            <Card className={classes.Card}>
+                                <CardMedia
+                                    className={classes.Media}
+                                    image={logo}
+                                />
+                            </Card>
+                        </Grid>
+                    </header>
+                    <div className={classes.fondo}>
+                        { this.state.secciones.map((seccion, index) => {
+                            return (
+                        <Grid item xs={12} className={classes.root}>
+                            <Paper elevation={3} className={classes.paperSeparator}>
+                            <Typography className = {classes.title} gutterBottom align="center" variant="h4">
+                                {seccion}                                
+                            </Typography>
+                            </Paper>
+                            { this.state.platos[index].map((plato) => {
+                                return(
+                                    <Grid className={classes.items}>
+                                        <Paper elevation={1} className={classes.paper}>
+                                            <Grid container spacing={2}>
+                                            {
+                                                plato.image && 
+                                                <Grid item xs={4} className={classes.imageContainer}>
+                                                <div className={classes.image}>
+                                                    <img className={classes.img} alt="complex" src={plato.image} />
+                                                </div>
+                                                </Grid>
+                                            }    
+                                            <Grid item xs={plato.image ? 8 : 12} sm container spacing={2}>
+                                                <Grid item xs container direction="column" spacing={2}>
+                                                <Grid item xs>
                                                     <Typography 
-                                                        className={classes.descripcion}
-                                                        variant="body2"
-                                                        align="left"
-                                                        gutterBottom
+                                                        className={classes.plato}
+                                                        gutterBottom 
+                                                        align="left" 
+                                                        variant="h6"
                                                     >
-                                                        {plato.desc}
+                                                        {plato.name}
                                                     </Typography>
-                                                }
-                                                {
-                                                    plato.avatar &&    
-                                                    <AvatarGroup max={4}>
-                                                        <Avatar src={huevos} className={classes.small} />
-                                                        <Avatar src={crustaceo} className={classes.small} />
-                                                        <Avatar src={gluten} className={classes.small} />
-                                                    </AvatarGroup>
-                                                }
+                                                    {
+                                                        plato.desc &&
+                                                        <Typography 
+                                                            className={classes.descripcion}
+                                                            variant="body2"
+                                                            align="left"
+                                                            gutterBottom
+                                                        >
+                                                            {plato.desc}
+                                                        </Typography>
+                                                    }
+                                                    {
+                                                        plato.avatar &&    
+                                                        <AvatarGroup max={4}>
+                                                            <Avatar src={huevos} className={classes.small} />
+                                                            <Avatar src={crustaceo} className={classes.small} />
+                                                            <Avatar src={gluten} className={classes.small} />
+                                                        </AvatarGroup>
+                                                    }
+                                                </Grid>
                                             </Grid>
-                                        </Grid>
-                                        <Grid item>
-                                            <Typography 
-                                                className={classes.precio}
-                                                variant="h6">
-                                                {plato.price}
-                                            </Typography>
+                                            <Grid item>
+                                                <Typography 
+                                                    className={classes.precio}
+                                                    variant="h6">
+                                                    {plato.price}
+                                                </Typography>
+                                                </Grid>
                                             </Grid>
-                                        </Grid>
-                                        </Grid>
-                                    </Paper>
-                                </Grid>
+                                            </Grid>
+                                        </Paper>
+                                    </Grid>
+                                );
+                            })
+                            }
+                        </Grid>
                             );
                         })
                         }
-                    </Grid>
-                        );
-                    })
-                    }
-                    <Grid>
-                        <div className={classes.itemsInfo}>
-                            <img
-                            src={backYerba}
-                            alt="restaurante"
-                            className={classes.image}
-                            />                        
-                        </div>
-                    </Grid>   
-                </div>
-                <div className={classes.footer}>
-                    <Typography onClick={() => this.handleClickOpen()}
-                        variant="subtitle1">
-                        <ContactSupportIcon className={classes.icon}/>
-                        Info del Establecimiento
-                    </Typography>    
-                </div>
-                <Dialog fullScreen open={this.state.open} onClose={() => this.handleClose()} TransitionComponent={Transition}>
-                    <Toolbar>
-                        <IconButton edge="start" color="inherit" onClick={() => this.handleClose()} aria-label="close">
-                        <CloseIcon />
-                        </IconButton>
-                    </Toolbar>
-                    <div>
-                        <Grid container justify="center">
-                            <Grid item xs={6}>
-                                <div className={classes.itemsInfo}>
-                                    <img
-                                    src={logo}
-                                    alt="logo"
-                                    className={classes.image}
-                                    />
-                                    <Typography variant="subtitle1" align="center">
-                                    Avda. de la Estación s/n
-                                    </Typography>
-                                    <Typography variant="subtitle1" align="center">
-                                    29320 Campillos, Málaga
-                                    </Typography>
-                                    <Typography variant="subtitle1" align="center">
-                                        <PhoneIcon className={classes.icon}/>
-                                        952722320
-                                    </Typography>
-                                </div>
-                                <div className={classes.itemsInfo}>
-                                    <Grid item justify="center">
-                                        <Button 
-                                            onClick={() => this.handleClick(urlGMaps)}
-                                            fullWidth
-                                            variant='outlined'>
-                                                CÓMO LLEGAR
-                                        </Button>
-                                    </Grid>
-                                </div>
-                                <Grid container justify="center" spacing={2}>
-                                    <Grid item>
-                                        <TwitterIcon fontSize="large" onClick={() => this.handleClick(urlTwitter)}/>
-                                    </Grid>
-                                    <Grid item>
-                                        <FacebookIcon fontSize="large" onClick={() => this.handleClick(urlFacebook)}/>
-                                    </Grid>
-                                    <Grid item>
-                                        <InstagramIcon fontSize="large" onClick={() => this.handleClick(urlInstagram)}/>
+                        <Grid>
+                            <div className={classes.itemsInfo}>
+                                <img
+                                src={backYerba}
+                                alt="restaurante"
+                                className={classes.image}
+                                />                        
+                            </div>
+                        </Grid>   
+                    </div>
+                    <div className={classes.footer}>
+                        <Typography onClick={() => this.handleClickOpen()}
+                            variant="subtitle1">
+                            <ContactSupportIcon className={classes.icon}/>
+                            Info del Establecimiento
+                        </Typography>    
+                    </div>
+                    <Dialog fullScreen open={this.state.open} onClose={() => this.handleClose()} TransitionComponent={Transition}>
+                        <Toolbar>
+                            <IconButton edge="start" color="inherit" onClick={() => this.handleClose()} aria-label="close">
+                            <CloseIcon />
+                            </IconButton>
+                        </Toolbar>
+                        <div>
+                            <Grid container justify="center">
+                                <Grid item xs={6}>
+                                    <div className={classes.itemsInfo}>
+                                        <img
+                                        src={logo}
+                                        alt="logo"
+                                        className={classes.image}
+                                        />
+                                        <Typography variant="subtitle1" align="center">
+                                        Avda. de la Estación s/n
+                                        </Typography>
+                                        <Typography variant="subtitle1" align="center">
+                                        29320 Campillos, Málaga
+                                        </Typography>
+                                        <Typography variant="subtitle1" align="center">
+                                            <PhoneIcon className={classes.icon}/>
+                                            952722320
+                                        </Typography>
+                                    </div>
+                                    <div className={classes.itemsInfo}>
+                                        <Grid item>
+                                            <Button 
+                                                onClick={() => this.handleClick(urlGMaps)}
+                                                fullWidth
+                                                variant='outlined'>
+                                                    CÓMO LLEGAR
+                                            </Button>
+                                        </Grid>
+                                    </div>
+                                    <Grid container justify="center" spacing={2}>
+                                        <Grid item>
+                                            <TwitterIcon fontSize="large" onClick={() => this.handleClick(urlTwitter)}/>
+                                        </Grid>
+                                        <Grid item>
+                                            <FacebookIcon fontSize="large" onClick={() => this.handleClick(urlFacebook)}/>
+                                        </Grid>
+                                        <Grid item>
+                                            <InstagramIcon fontSize="large" onClick={() => this.handleClick(urlInstagram)}/>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                        </Grid>
-                    </div>
-                </Dialog>    
-            </div>
-		);
-	  }
+                        </div>
+                    </Dialog>    
+                </div>
+            );
+        }   
+    }
 }
 
 export default withStyles(styles)(carta);

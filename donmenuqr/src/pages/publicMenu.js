@@ -5,7 +5,6 @@ import 'react-image-lightbox/style.css';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 import axios from 'axios';
-import { authMiddleWare } from '../util/auth';
 
 const styles = (theme) => ({
 	content: {
@@ -46,7 +45,7 @@ class publicMenu extends Component {
 				this.setState({
 					menu: response.data,
 					imageGallery: response.data.imageUrls
-				},console.log(this.state.menu));
+				});
 			})
 			.catch((err) => {
 				console.log(err);
