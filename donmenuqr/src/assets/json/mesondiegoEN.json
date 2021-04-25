@@ -101,7 +101,7 @@
       {
          "name":"Serrano Ham",
          "desc":"",
-         "price":["13.00 €"]
+         "price":["9.00 €"]
       },
       {
          "name":"Iberian combination plate",
@@ -378,7 +378,7 @@
       {
          "name":"Chicken breast grilled",
          "desc":"",
-         "price":["8.50 €"],
+         "price":["8.00 €"],
          "alergenos": ["gluten"]
       },
       {
@@ -461,11 +461,6 @@
          "price":["8.00 €", "5.50 €"]
      },
      {
-         "name":"Croquetas caseras de bacalao",
-         "desc":"",
-         "price":["9.00 €", "6.00 €"]
-     },
-     {
          "name":"Plato del sacristán",
          "desc":"Jamón, huevo, pimiento verde frito y patatas",
          "price":["8.50 €"]
@@ -478,7 +473,7 @@
      {
          "name":"Ensaladilla Rusa",
          "desc":"",
-         "price":["7.00 €", "5.00 €"]
+         "price":["8.00 €", "5.00 €"]
      },
      {
          "name":"Filetitos de pollo empanados y patatas fritas",

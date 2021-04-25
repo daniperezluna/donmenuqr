@@ -99,7 +99,7 @@
        {
           "name":"Jamón serrano",
           "desc":"",
-          "price":["13.00 €"]
+          "price":["9.00 €"]
        },
        {
           "name":"Combinado ibérico",
@@ -177,7 +177,7 @@
          {
             "name":"Gazpacho (en temporada)",
             "desc":"",
-            "price":["6.00 €"],
+            "price":["4.50 €"],
             "alergenos": ["gluten", "nueces", "azufre"]
          }
     ],
@@ -370,7 +370,7 @@
        {
           "name":"Pechuga de pollo a la brasa",
           "desc":"",
-          "price":["8.50 €"],
+          "price":["8.00 €"],
           "alergenos": ["gluten"]
        },
        {
@@ -453,11 +453,6 @@
           "price":["8.00 €", "5.50 €"]
       },
       {
-          "name":"Croquetas caseras de bacalao",
-          "desc":"",
-          "price":["9.00 €", "6.00 €"]
-      },
-      {
           "name":"Plato del sacristán",
           "desc":"Jamón, huevo, pimiento verde frito y patatas",
           "price":["8.50 €"]
@@ -470,7 +465,7 @@
       {
           "name":"Ensaladilla Rusa",
           "desc":"",
-          "price":["7.00 €", "5.00 €"]
+          "price":["8.00 €", "5.00 €"]
       },
       {
           "name":"Filetitos de pollo empanados y patatas fritas",
