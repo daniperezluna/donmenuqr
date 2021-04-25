@@ -36,9 +36,9 @@ function App() {
                 <Route exact path="/" component={LandingPage}/>
                 <Route exact path="/login" component={login}/>
                 <Route exact path="/dashboard" component={dashboard}/>
-                <Route exact path="/cartas/:menuId/publicMenu" component={publicMenu}/>
-                <Route exact path="/cartas/yerbaguena" component={carta}/>
-                <Route exact path="/cartas/mesonDiego" component={cartaMeson}/>
+                <Route exact path="/cartas/:menuId" component={publicMenu}/>
+                <Route exact path="/cartas/:menuId/static" component={carta}/>
+                <Route exact path="/cartas/KuoO7Kns9eUUvTiS0ppi/meson" component={cartaMeson}/>
                 <Route exact path="/cartas/:menuId/basic" component={cartaBasica}/>
             </Switch>
           </div>
