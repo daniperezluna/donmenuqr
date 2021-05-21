@@ -1,64 +1,49 @@
 { 
-   "barra": [
+   "entrantes": [
       {
-         "name":"Queso viejo curado",
+         "name":"Jamón Iberico Julián Martin 100% Bellota (corte vertical)",
          "desc":"",
-         "price":"12 €"
+         "price":"26 €"
       },
       {
-         "name":"Jamón Ibérico de bellota 100%",
-         "desc":"",
-         "price":"24 €"
-      },
-      {
-         "name":"Timbal de foie con queso de cabra caramelizado al Pedro Ximénez",
-         "desc":"",
-         "price":"16 €"
-      },
-      {
-         "name":"Ensaladilla Rusa",
-         "desc":"",
-         "price":"10 €"
-      },
-      {
-         "name":"Huevos rotos en empedrado de patatas y chistorra",
-         "desc":"",
-         "price":"8 €"
-      },
-      {
-         "name":"Teriyaqui de pluma ibérica",
+         "name":"Queso de Cabra payoya curado en manteca de cerdo",
          "desc":"",
          "price":"14 €"
       },
       {
-         "name":"Pulpo a la brasa",
+         "name":"Queso Gris de Montaña de Queserías Argudo (Campillos)",
          "desc":"",
-         "price":"20€"
+         "price":"14 €"
       },
       {
-         "name":"Patatas bravas al estilo Peret",
+         "name":"Queso Azul de Queserías Argudo (Campillos)",
          "desc":"",
-         "price":"7 €"
+         "price":"14 €"
       },
       {
-         "name":"Anchoas del Cantábrico con pan y tomate",
-         "desc":"",
-         "price":"3 € / u."
-      },
-      {
-         "name":"Croquetas de jamón y nueces con alioli de membrillo",
-         "desc":"",
-         "price":"8 €"
-      },
-      {
-         "name":"Parrillada de verduras",
+         "name":"Ensalada de tomates en conserva tradicional con cebolletas y ventresca de atún",
          "desc":"",
          "price":"12 €"
       },
       {
-         "name":"Mollejas de chivo al palocortado",
+         "name":"Ensalada de judías verdes con foie y vinagreta",
          "desc":"",
          "price":"16 €"
+      },
+      {
+         "name":"Anchoas del Cantabrico con tostada y tomate",
+         "desc":"",
+         "price":"3 € / und"
+      },
+      {
+         "name":"Croquetas de Jamón y nueces con alioli de membrillo",
+         "desc":"",
+         "price":"10 €"
+      },
+      {
+         "name":"Croquetas de pringá y Hierbabuena",
+         "desc":"",
+         "price":"10 €"
       },
       {
          "name":"Huevos con patatas y trufa",
@@ -66,92 +51,146 @@
          "price":"12 €"
       },
       {
-         "name":"Cocochas de bacalao en su Pil-Pil",
+         "name":"Alcachofas con untuoso de pollo",
+         "desc":"",
+         "price":"14 €"
+      },
+      {
+         "name":"Tartar de atún",
+         "desc":"",
+         "price":"22 €"
+      },
+      {
+         "name":"Ostra francesa al natural",
+         "desc":"",
+         "price":"4 €"
+      },
+      {
+         "name":"Habitas baby a la catalana",
          "desc":"",
          "price":"16 €"
+      },
+      {
+         "name":"Ensaladilla Rusa con huevo frito y chicharrón de Cádiz",
+         "desc":"",
+         "price":"12 €"
       }
-   ], 
-   "entrantes":[
+   ],
+    "pescado":[
        {
-          "name":"Coulant de Foie con reducción de pasas y moscatel de Málaga",
+          "name":"Boquerones de Málaga fritos",
+          "desc":"",
+          "price":"12 €"
+       },
+       {
+          "name":"Rape Frito a nuestra manera",
+          "desc":"",
+          "price":"34 €"
+       },
+       {
+          "name":"Ortiguillas frescas fritas",
           "desc":"",
           "price":"14 €"
        },
        {
-          "name":"Ensalada de tomates en conserva tradicional con ventresca",
+          "name":"Gamba blanca de Málaga",
           "desc":"",
-          "price":"12 €"
+          "price":"20 €"
        },
        {
-          "name":"Wok de Verduras y langostinos",
-          "desc":"",
-          "price":"12 €"
-       },
-       {
-          "name":"Alcachofas con jugo de jamón ibérico",
-          "desc":"",
-          "price":"12 €"
-       }
-    ],
-    "pescado":[
-       {
-          "name":"Bacalao a la brasa",
+          "name":"Bacalao confitado",
           "desc":"",
           "price":"22 €"
        },
        {
           "name":"Salmón con bacon, gorgonzola y puré de zanahorias",
           "desc":"",
-          "price":"12 €"
+          "price":"16 €"
+       },
+       {
+          "name":"Pulpo a la brasa",
+          "desc":"",
+          "price":"20 €"
        }
     ],
     "carne":[
        {
-          "name":"Chuletón de vaca vieja madurada",
+          "name":"Presa ibérica a la brasa con Mini-Verduras",
           "desc":"45 días",
-          "price":"7 € / 100 gr"
-       },
-       {
-          "name":"Presa ibérica con papa arrugá y mojo picón",
-          "desc":"",
           "price":"20 €"
        },
        {
-          "name":"Solomillo de buey del Valle del Esla",
+          "name":"Solomillo de buey Del Valle del Esla",
           "desc":"",
           "price":"36 €"
        },
        {
-          "name":"Chivo lechal malagueño al estilo castellano",
+          "name":"Paletilla de Chivo Lechal Malagueño confitada a baja temperatura",
           "desc":"",
           "price":"28 €"
+       },
+       {
+          "name":"Chivo frito tradicional",
+          "desc":"",
+          "price":"22 €"
+       },
+       {
+          "name":"Chuletas de chivo brasa",
+          "desc":"",
+          "price":"24 €"
+       },
+       {
+          "name":"Mollejas de chivo lechal",
+          "desc":"",
+          "price":"16 €"
+       },
+       {
+          "name":"Lomo bajo de Wagyu nacional",
+          "desc":"",
+          "price":"14.50 € / 100 gr. €"
+       },
+       {
+          "name":"Chuletón de vaca vieja madurada",
+          "desc":"",
+          "price":"7 € / 100 gr."
+       },
+       {
+          "name":"Teriyaki de pluma ibérica con parmentier de patatas",
+          "desc":"",
+          "price":"18 €"
        }
     ],
     "postre":[
-       {
-          "name":"Coulant de chocolate con helado de vainilla",
+      {
+         "name":"Tarta de queso",
+         "desc":"",
+         "price":"6,50 €"
+      },
+      {
+          "name":"Coulant de chocolate",
           "desc":"",
-          "price":"6,50 €"
+          "price":"8 €"
        },
        {
-          "name":"Tarta de queso con helado de algodón de azúcar",
+          "name":"Tarta de choco-Baileys",
           "desc":"",
-          "price":"6,50 €"
-       },
-       {
-          "name":"Tarta de manzana crujiente con heladod de Baileys",
-          "desc":"",
-          "price":"6,50 €"
-       },
-       {
-          "name":"Espuma de yogourt al limón con marrón glacé",
-          "desc":"",
-          "price":"6 €"
+          "price":"6.50 €"
        },
        {
           "name":"Tocino de cielo con crema de limón",
           "desc":"",
-          "price":"6 €"
+          "price":"6.50 €"
+       },
+       {
+          "name":"Torrija de Pan brioche",
+          "desc":"",
+          "price":"6.50 €"
+       },
+       {
+          "name":"Tarta de manzana crujiente",
+          "desc":"",
+          "price":"8 €"
        }
+
     ]
- }
+}

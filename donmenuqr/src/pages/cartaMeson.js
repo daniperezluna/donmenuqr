@@ -412,31 +412,10 @@ class cartaMeson extends Component {
                             <Paper elevation={3} className={classes.paper}>
                                 <Typography className={classes.allergensInfo}>
                                 { this.state.lang === 'es' ?
-                                'Esta carta les facilita información actualizada de los alérgenos o trazas en nuestro platos. Pero nos vemos en la obligación de comunicarles, que en nuestras cocinas la preparación de un planto en un espacio separado no es suficiente para garantizar la seguridad al 100% de nuestros clientes con algún tipo de alergia o intolerancia.'
+                                'EN CASO DE ALERGIA O INTOLERANCIA ALIMENTARIA CONSULTAR AL CAMARERO'
                                 :
-                                'This menu provides you with up-to-date information on the allergens or traces in our dishes. But we are obliged to inform you that in our kitchens the preparation of a dish in a separate space is not enough to guarantee 100% safety for our customers with any type of allergy or intolerance.' }
-                                </Typography>    
-                                <Typography className={classes.allergensInfo}>
-                                { this.state.lang === 'es' ?
-                                'Por ello comunicarles que todas nuestras elaboraciones son susceptibles de contener trazas de gluten, mariscos, huevo, pescado cacahuete, soja, leche, frutos de cascara, apio, mostaza, sésamo, sulfitos, altramuz y moluscos.'
-                                :
-                                'Therefore, we would like to inform you that all our preparations may contain traces of gluten, seafood, eggs, fish, peanuts, soya, milk, nuts, celery, mustard, sesame, sulphites, lupin and molluscs.' }
+                                'IN CASE OF FOOD ALLERGY OR INTOLERANCE, ASK THE WAITER FOR ADVICE' }
                                 </Typography>
-                                <div className={classes.alergenosContainer}>
-                                    { alergenos.map(alergeno => {
-                                        return(
-                                            <Typography 
-                                                className={classes.alergenosInfo}
-                                                variant="body2">
-                                            <Avatar 
-                                                src={this.returnAlergeno(alergeno)} 
-                                                className={classes.small}>
-                                                        </Avatar>
-                                                        {alergeno}
-                                                    </Typography>
-                                        )}
-                                    )}
-                                </div>
                             </Paper>
                         </Grid>
                     </div>

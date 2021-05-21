@@ -3,20 +3,17 @@
       {
          "name":"Our homemade croquettes baked chicken and ham",
          "desc":"",
-         "price":["8.00 €"],
-         "alergenos": ["gluten", "huevos", "soja", "lacteos", "nueces", "azufre"]
+         "price":["8.00 €"]
       },
       {
          "name":"Cantabrian anchoves in olive oil",
          "desc":"Price per unit, minimum 6 units",
-         "price":["2.00 €"],
-         "alergenos":["gluten", "pescado", "azufre"] 
+         "price":["2.00 €"]
       },
       {
          "name":"Burgos black pudding with semi-intensive eggs",
          "desc":"",
-         "price":["8.00 €"],
-         "alergenos": ["huevos"]
+         "price":["8.00 €"]
       },
       {
          "name":"Calamar Nacional",
@@ -25,180 +22,131 @@
       },
       {
          "name":"Calamar Nacional",
-         "desc":"800 gr. piece aprox.",
+         "desc":"1200 gr. piece aprox.",
          "price":["28.00 €"]
       },
       {
-         "name":"Rice with lobster",
-         "desc":"Minimum 2 persons",
-         "price":["50.00 €"],
-         "alergenos": ["gluten", "moluscos", "pescado", "azufre", "moluscos"]
+         "name":"Lamb gizzard",
+         "desc":"",
+         "price":["17.00 €"]
       },
       {
-         "name":"Filet mignon",
-         "desc":"Sirloin steak with cream of boletus",
-         "price":["22.00 €"],
-         "alergenos": ["gluten", "azufre"]
+        "name":"Grilled octopus",
+        "desc":"",
+        "price":["15.00 €"]
       }
+   ],
+   "our rice": [
+      {
+         "name":"Rice with lobster",
+         "desc":"Minimum 2 persons",
+         "price":["45.00 €"]
+      },
+      {
+        "name":"Rice with carabinero",
+        "desc":"Minimum 2 persons",
+        "price":["45.00 €"]
+     }
    ],
    "Salads":[
       {
          "name":"Avocados",
          "desc":"With shrimp, pink sauce and lettuce juliana",
-         "price":["10.00 €"],
-         "alergenos": ["gluten", "moluscos", "huevos", "pescado", "soja", "lacteos", "azufre"]
+         "price":["11.00 €"]
       },
       {
          "name":"Warm salad",
          "desc":"Bacon, garlic, Malaga goat cheese, tomato cherry, pine and lettuce",
-         "price":["10.00 €"],
-         "alergenos": ["gluten", "lacteos", "nueces", "azufre"]
+         "price":["11.00 €"]
       },
       {
          "name":"Mixed salad",
          "desc":"Lettuce, tomato, corn, beet, tuna, egg, onion and white asparagaus",
-         "price":["5.50 €"],
-         "alergenos": ["gluten", "huevos", "pescado", "azufre"]
+         "price":["6.00 €"]
       },
       {
          "name":"Special salad",
          "desc":"Cogollos, tomato, tuna, egg, corn, beet, carrot, kiwi, avocado and asparagaus",
-         "price":["7.50 €"],
-         "alergenos": ["gluten", "huevos", "pescado", "azufre"]
+         "price":["7.50 €"]
       },
       {
          "name":"Minced of tomato, garlic, tuna and parsley",
          "desc":"",
-         "price":["5.50 €"],
-         "alergenos": ["gluten", "pescado", "azufre"]
+         "price":["5.50 €"]
       },
       {
          "name":"Tropical salad",
          "desc":"Lettuce, fruit, shrimp, and pink sauce",
-         "price":["10.00 €"],
-         "alergenos": ["gluten", "moluscos", "huevos", "pescado", "soja", "lacteos", "azufre"]
+         "price":["10.00 €"]
       }
    ],
    "appetzers":[
       {
          "name":"Grilled prawns",
          "desc":"",
-         "price":["15.00 €"],
-         "alergenos": ["gluten", "moluscos", "azufre"]
+         "price":["16.50 €"]
       },
       {
          "name":"Langostine prawns",
          "desc":"",
-         "price":["10.00 €"],
-         "alergenos": ["gluten", "moluscos", "azufre"]
+         "price":["11.00 €"]
       },
       {
          "name":"Iberian Ham",
          "desc":"Designation of origin",
-         "price":["22.00 €"],
-         "alergenos": ["gluten"]
+         "price":["22.00 €"]
       },
       {
          "name":"Serrano Ham",
          "desc":"",
-         "price":["9.00 €"]
+         "price":["10.00 €"]
       },
       {
          "name":"Iberian combination plate",
          "desc":"",
-         "price":["13.00 €"],
-         "alergenos": ["gluten", "soja", "lacteos"]
+         "price":["14.50 €"]
       },
       {
          "name":"Aged sheep cheese",
          "desc":"",
-         "price":["12.50 €"],
-         "alergenos": ["gluten", "huevos", "lacteos"]
+         "price":["13.00 €"]
       },
       {
          "name":"Blue cheese goat",
          "desc":"Artisanal Elaboration, natural of Andalucía, 'Andazul'",
-         "price":["13.00 €"],
-         "alergenos": ["gluten", "huevos", "lacteos"]
+         "price":["13.00 €"]
       },
       {
          "name":"Cheese combination plate",
          "desc":"",
-         "price":["12.50 €"],
-         "alergenos": ["gluten", "huevos", "lacteos"]
+         "price":["13.00 €"]
       },
       {
          "name":"Aged Cheese in oil",
          "desc":"",
-         "price":["12.50 €"],
-         "alergenos": ["gluten", "huevos", "lacteos"]
+         "price":["13.00 €"]
       },
       {
          "name":"Cooked spicy sausage with wine",
          "desc":"",
-         "price":["8.00 €"],
-         "alergenos": ["gluten", "lacteos", "azufre"]
+         "price":["8.00 €"]
       },
       {
          "name":"Russian salad",
          "desc":"",
          "price":["8.00 €"]
-      },
-      {
-         "name":"Octopus",
-         "desc":"",
-         "price":["16.00 €"],
-         "alergenos": ["pescado"]
-      }
-   ],
-   "first course":[
-      {
-         "name":"Bread crums, olive oil, garlic and pork",
-         "desc":"",
-         "price":["6.00 €"],
-         "alergenos": ["gluten", "huevos", "lacteos", "azufre"]
-      },
-      {
-         "name":"Cold Almond and bread soup",
-         "desc":"",
-         "price":["5.50 €"],
-         "alergenos": ["gluten", "nueces", "azufre"]
-      },
-      {
-         "name":"Seafood soup",
-         "desc":"",
-         "price":["5.50 €"],
-         "alergenos": ["gluten", "pescado", "azufre", "moluscos"]
-      },
-      {
-         "name":"Miced soup",
-         "desc":"",
-         "price":["4.50 €"],
-         "alergenos": ["gluten", "huevos"]
-      },
-      {
-         "name":"Tomato and Bread Cream with dices of ham and eggs",
-         "desc":"",
-         "price":["6.00 €"],
-         "alergenos": ["gluten"]
-      },
-      {
-         "name":"Cold vegetables soup (seasonal dish)",
-         "desc":"",
-         "price":["6.00 €"],
-         "alergenos": ["gluten", "nueces", "azufre"]
       }
    ],
    "vegatables y eggs": [
       {
          "name":"Scrambled eggs with shrimp and garlic cod",
          "desc":"",
-         "price":["12.00 €"]
+         "price":["13.50 €"]
       },
       {
          "name":"Small artichokes with ham and prawns",
          "desc":"",
-         "price":["11.00 €"]
+         "price":["11.50 €"]
       },
       {
          "name":"Spanish omelette",
@@ -206,59 +154,83 @@
          "price":["5.00 €"]
       },
       {
+         "name":"Seasonal vegatable grill",
+         "desc":"",
+         "price":["10.00 €"]
+      },
+      {
          "name":"Sexton dish",
          "desc":"Eggs with ham, potatoes and peppers",
-         "price":["8.50 €"]
+         "price":["9.00 €"]
+      }
+   ],
+   "first course":[
+      {
+         "name":"Bread crums, olive oil, garlic and pork",
+         "desc":"",
+         "price":["6.00 €"]
+      },
+      {
+         "name":"Cold Almond and bread soup",
+         "desc":"",
+         "price":["6.00 €"]
+      },
+      {
+         "name":"Seafood soup",
+         "desc":"",
+         "price":["5.50 €"]
+      },
+      {
+         "name":"Miced soup",
+         "desc":"",
+         "price":["4.50 €"]
+      },
+      {
+         "name":"Tomato and Bread Cream with dices of ham and eggs",
+         "desc":"",
+         "price":["6.00 €"]
+      },
+      {
+         "name":"Cold vegetables soup (seasonal dish)",
+         "desc":"",
+         "price":["5.00 €"]
       }
    ],
    "fish":[
       {
          "name":"Cod loin to garlic",
          "desc":"",
-         "price":["14.50 €"],
-         "alergenos": ["gluten", "moluscos", "pescado", "azufre"]
+         "price":["14.50 €"]
       },
       {
          "name":"Restaurant salmon",
          "desc":"Flambé with shrimp sauce",
-         "price":["16.00 €"],
-         "alergenos": ["gluten", "moluscos", "pescado", "lacteos", "azufre" ]
+         "price":["16.00 €"]
       },
       {
          "name":"Calamari with garnish",
          "desc":"",
-         "price":["10.00 €"],
-         "alergenos": ["gluten", "pescado", "azufre"]
+         "price":["10.00 €"]
       },
       {
          "name":"National fish 'rosada' fried or grilled",
          "desc":"",
-         "price":["13.00 €"],
-         "alergenos": ["gluten", "pescado"]
+         "price":["13.00 €"]
       },
       {
          "name":"Fried cod with garnish",
          "desc":"",
-         "price":["11.00 €"],
-         "alergenos": ["gluten","pescado", "azufre"]
+         "price":["12.00 €"]
       },
       {
          "name":"Fried fish with salad",
          "desc":"",
-         "price":["12.50 €"],
-         "alergenos": ["gluten", "pescado", "azufre"]
-      },
-      {
-         "name":"Grilled swordfish",
-         "desc":"",
-         "price":["11.50 €"],
-         "alergenos": ["gluten", "pescado", "azufre"]
+         "price":["12.00 €"]
       },
       {
          "name":"Red tuna cooke with Cider",
          "desc":"",
-         "price":["21.00 €"],
-         "alergenos": ["gluten", "pescado", "azufre"]
+         "price":["21.00 €"]
       }
    ],
    "pork":[
@@ -270,32 +242,27 @@
       {
          "name":"Special cut pork",
          "desc":"",
-         "price":["14.00 €"],
-         "alergenos": ["gluten", "azufre"]
+         "price":["15.00 €"]
       },
       {
          "name":"Pork tenderloin with potatoes",
          "desc":"",
-         "price":["15.00 €"],
-         "alergenos": ["gluten"]
+         "price":["16.00 €"]
       },
       {
          "name":"Barbecued steak pork",
          "desc":"",
-         "price":["9.00 €"],
-         "alergenos": ["gluten", "azufre"]
+         "price":["9.00 €"]
       },
       {
          "name":"Pork meat",
          "desc":"",
-         "price":["11.50 €"],
-         "alergenos": ["gluten"]
+         "price":["12.50 €"]
       },
       {
          "name":"Steak grilled pork",
          "desc":"",
-         "price":["10.00 €"],
-         "alergenos": ["gluten"]
+         "price":["10.00 €"]
       },
       {
          "name":"Steak or filled pork with potatoes",
@@ -310,32 +277,27 @@
       {
          "name":"Segovia (national) small pork piglet baked and garnish",
          "desc":"",
-         "price":["23.50 €"],
-         "alergenos": ["gluten", "azufre"]
+         "price":["23.50 €"]
       },
       {
          "name":"Iberian pork cheeks",
          "desc":"",
-         "price":["12.00 €"],
-         "alergenos": ["gluten", "azufre"]
+         "price":["13.00 €"]
       },
       {
          "name":"Diego´s",
          "desc":"Lomo in butter, eggs, sausage, potato and pepper",
-         "price":["9.50 €"],
-         "alergenos": ["gluten", "huevos"]
+         "price":["10.00 €"]
       },
       {
          "name":"Pork tenderloin brochette grilled",
          "desc":"",
-         "price":["11.00 €"],
-         "alergenos": ["gluten"]
+         "price":["11.00 €"]
       },
       {
          "name":"Loin with tomato salsa and chips",
          "desc":"",
-         "price":["8.00 €"],
-         "alergenos": ["gluten",  "azufre"]
+         "price":["8.00 €"]
       },
       {
          "name":"Filled pork with iberian ham and cheese",
@@ -352,52 +314,39 @@
       {
          "name":"Lamb chops with garnish",
          "desc":"",
-         "price":["15.00 €"],
-         "alergenos": ["gluten"]
+         "price":["16.00 €"]
       },
       {
          "name":"Shoulder of lamb",
          "desc":"",
-         "price":["19.50 €"],
-         "alergenos": ["gluten"]
+         "price":["19.50 €"]
       },
       {
          "name":"Shoulder of lamb with rosemary honey",
          "desc":"",
-         "price":["19.50 €"],
-         "alergenos": ["gluten"]
+         "price":["19.50 €"]
       }
    ],
    "poultry":[
       {
          "name":"Chicken breast",
          "desc":"Stuffed shrimp and bacon sauce flambe",
-         "price":["12.00 €"],
-         "alergenos": ["gluten", "moluscos", "soja", "lacteos", "azufre"]
+         "price":["12.00 €"]
       },
       {
          "name":"Chicken breast grilled",
          "desc":"",
-         "price":["8.00 €"],
-         "alergenos": ["gluten"]
-      },
-      {
-         "name":"Sauce",
-         "desc":"Pepper or Roquefort",
-         "price":["1.50 €"]
+         "price":["8.00 €"]
       },
       {
          "name":"Chicken breast patty",
          "desc":"",
          "price":["8.00 €"]
-      }
-   ],
-   "rabbit":[
+      },
       {
-         "name":"Grilled rabbit",
-         "desc":"",
-         "price":["10.00 €"],
-         "alergenos": ["gluten"]
+         "name":"Sauce",
+         "desc":"Pepper or Roquefort",
+         "price":["1.50 €"]
       }
    ],
    "carnes añojo":[
@@ -405,26 +354,22 @@
        {
            "name":"T-Bone Steak",
            "desc":"Each 100 gr (for 2 persons)",
-           "price":["4.50 €"],
-           "alergenos": ["gluten"]
+           "price":["4.75 €"]
        },
        {
            "name":"Beef Steak",
            "desc":"Cada 100 gr",
-           "price":["4.50 €"],
-           "alergenos": ["gluten"]
+           "price":["4.75 €"]
        },
        {
            "name":"Beef Tenderloin grilled",
            "desc":"",
-           "price":["22.00 €"],
-           "alergenos": ["gluten"]
+           "price":["22.00 €"]
        },
        {
            "name":"Bull tail",
            "desc":"yearling",
-           "price":["14.00 €"],
-           "alergenos": ["gluten"]
+           "price":["14.50 €"]
        }
    ],
    "carnes vacuno mayor":[
@@ -432,25 +377,17 @@
        {
            "name":"T-Bone Steak",
            "desc":"Each 100 gr (for 2 persons)",
-           "price":["4.95 €"],
-           "alergenos": ["gluten"]
+           "price":["5.50 €"]
        },
        {
            "name":"Beef Steak",
            "desc":"Each 100 gr",
-           "price":["4.95 €"],
-           "alergenos": ["gluten"]
+           "price":["5.50 €"]
        },
        {
            "name":"Beef Tenderloin grilled",
            "desc":"",
-           "price":["23.00 €"],
-           "alergenos": ["gluten"]
-       },
-       {
-           "name":"Hamburguesa de vacuno mayor",
-           "desc":"",
-           "price":["8.00 €"]
+           "price":["23.00 €"]
        }
    ],
    "Raciones":[
@@ -523,13 +460,11 @@
      
  ],
    "bocadillos":[
-       
        {
            "name":"Lomo en manteca",
            "desc":"",
            "price":["4.25 €", "3.75 €", "2.75 €"],
-           "pan": ["Rebanada", "Bocadillo", "Pitufo"],
-           "alergenos": ["gluten"]
+           "pan": ["Rebanada", "Bocadillo", "Pitufo"]
        },
        {
            "name":"Bacon con rodajas de tomate y queso",

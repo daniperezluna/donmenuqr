@@ -27,6 +27,8 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import backYerba from '../assets/backYerba.png'
+import yerbaguena from '../assets/json/yerbaguena.json';
+import fondoYerba from '../assets/fondoYerba.jpg'
 
 const urlGMaps = "https://www.google.es/maps/place/Restaurante+Yerbag%C3%BCena/@37.0362944,-4.8676718,17z/data=!3m1!4b1!4m5!3m4!1s0xd72a5308f319d21:0xec736b58ff467a35!8m2!3d37.0362944!4d-4.8654778";
 const urlFacebook = "https://www.facebook.com/REST.YERBAGUENA/";
@@ -100,7 +102,7 @@ const styles = (theme) => ({
         overflow: 'auto'
     },
     imgFondo: {
-        backgroundImage: 'url(https://www.donmenuqr.com/assets/fondoYerba.jpg)',
+        backgroundImage: fondoYerba,
         backgroundSize: 'contain',
         backgroundPositionX: 'center',
         position: 'fixed',
@@ -187,7 +189,7 @@ class carta extends Component {
         window.open(url, "_blank");
     }
 
-    componentDidMount = () => {
+    /*componentDidMount = () => {
         axios
         .get(`/menus/${this.state.params}`)
         .then((response) => {
@@ -202,7 +204,18 @@ class carta extends Component {
         .catch((err) => {
             console.log(err);
         });
-	};
+	};*/
+
+    componentDidMount = () => {
+        this.setState({
+            secciones: Object.keys(yerbaguena),
+            platos: Object.values(yerbaguena)
+        },() => {
+             this.setState({
+                uiLoading: false
+            })
+        });
+    };
 
 	render() {
         const { classes } = this.props;
