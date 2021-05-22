@@ -44,7 +44,7 @@ const styles = (theme) => ({
         left: 0,
         bottom: 0,
         height: '100%',
-        backgroundImage: 'url(https://www.donmenuqr.com/assets/fondoYerba.jpg)',
+        backgroundImage: `url(${fondoYerba})`,
         backgroundSize: 'contain',
         backgroundPositionX: 'center',
         position: 'fixed'
@@ -102,7 +102,7 @@ const styles = (theme) => ({
         overflow: 'auto'
     },
     imgFondo: {
-        backgroundImage: fondoYerba,
+        backgroundImage: `url(${fondoYerba})`,
         backgroundSize: 'contain',
         backgroundPositionX: 'center',
         position: 'fixed',
@@ -311,6 +311,13 @@ class carta extends Component {
                             );
                         })
                         }
+                        <Grid item xs={12} className={classes.root}>
+                            <Paper elevation={3} className={classes.paperSeparator}>
+                            <Typography className = {classes.title} gutterBottom align="center" variant="h4">
+                                Menú Degustación - 58 €                                
+                            </Typography>
+                            </Paper>
+                        </Grid>
                         <Grid>
                             <div className={classes.itemsInfo}>
                                 <img
